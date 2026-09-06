@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roster</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/globals/global.css">
+  <link rel="stylesheet" href="CSS/globals/global-sidebar.css">
+  <link rel="stylesheet" href="CSS/roster.css">
+
+</head>
+
+<body>
+  <section class="section-header" id="main-site-header">
+    <div class="container">
+      <header class="site-header">
+        <div class="top-bar">
+          <div class="logo"><span class="text-white">AT</span><span class="text-red">BALLPARK</span></div>
+          
+          <div class="header-actions">
+            <div class="metadata">
+              <div class="live-indicator">
+                <img src="images/2_77.svg" alt="Live" class="live-dot">
+                <span class="live-text">EN VIVO: 7º INNING</span>
+              </div>
+              <div class="location">SANTIAGO, RD</div>
+            </div>
+
+            <div class="logo-hamburguesa">
+              <button class="button-menu">
+                <img src="images/menu.svg" alt="menu de opciones" class="menu-logo">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <nav class="nav-tabs">
+          <a href="index.html" class="tab">INICIO</a>
+          <a href="Principal.html" class="tab">PRINCIPAL</a>
+          <a href="historia.html" class="tab">HISTORIA</a>
+          <a href="temporada.html" class="tab">TEMPORADA</a>
+          <a href="leyendas.html" class="tab">LEYENDAS</a>
+          <a href="roster.html" class="tab active">ROSTER</a>
+          <a href="trivia.html" class="tab">TRIVIA</a>
+          <a href="Scan.html" class="tab">ESCANEAR</a>
+        </nav>
+
+
+        <div class="mobile-menu" id="mobile-menu">
+          <div class="mobile-menu-header">
+            <div class="logo">
+              <span class="text-white">AT</span><span class="text-red">BALLPARK</span>
+            </div>
+  
+            <button class="mobile-menu-close" id="mobile-menu-close">
+              <img src="images/close-menu.svg" alt="botón cerrar menú" class="close-logo">
+            </button>
+          </div>
+  
+          <nav class="mobile-nav">
+            <a href="index.html">INICIO</a>
+            <a href="Principal.html">PRINCIPAL</a>
+            <a href="historia.html">HISTORIA</a>
+            <a href="temporada.html">TEMPORADA</a> 
+            <a href="leyendas.html">LEYENDAS</a>
+            <a href="roster.html" class="active">ROSTER</a>
+            <a href="trivia.html">TRIVIA</a>
+            <a href="Scan.html">ESCANEAR</a>
+          </nav>
+        </div>
+        
+        <div class="mobile-overlay" id="mobile-overlay"></div>
+      </header>
+    </div>
+  </section>
+
+
+
+
+
+  <div class="combobox-equipos">
+    <input type="text" id="combo-input" placeholder="Elige un equipo..." autocomplete="off" readonly>
+    <span class="flecha">&#9662;</span>
+
+    <ul class="combo-lista" id="combo-lista">
+      <li>Rays</li>
+      <li>Yankees</li>
+      <li>Red Sox</li>
+      <li>Orioles</li>
+      <li>Blue Jays</li>
+      <li>White Sox</li>
+      <li>Guardians</li>
+      <li>Twins</li>
+      <li>Tigers</li>
+      <li>Royals</li>
+      <li>Astros</li>
+      <li>Rangers</li>
+      <li>Mariners</li>
+      <li>Athletics</li>
+      <li>Angels</li>
+    </ul>
+  </div>
+
+
+
+
+  <section id="section-roster">
+    <div class="container">
+      <div class="roster-layout">
+
+        <!-- Left Column: Player Grid -->
+        <div class="roster-main">
+          <h2 class="section-title">PLANTILLA ACTIVA</h2>
+          <div class="players-grid">
+
+            <!-- Active Player Card -->
+            <article class="player-card active">
+              <img src="images/41d9b1ce46d0b50b7530efc11be17fad55fb8280.png" alt="Mateo Guerrero" class="player-img">
+              <div class="player-info">
+                <span class="player-number">#24</span>
+                <h3 class="player-name">Mateo Guerrero</h3>
+                <span class="player-position">JARDINERO CENTRAL</span>
+              </div>
+            </article>
+
+            <!-- Player Card 2 -->
+            <article class="player-card">
+              <img src="images/0c47dcccb0204b8ba8d1eca55f0e0be959df6f7d.png" alt="Carlos Santana" class="player-img">
+              <div class="player-info">
+                <span class="player-number">#45</span>
+                <h3 class="player-name">Carlos Santana</h3>
+                <span class="player-position">LANZADOR ABRIDOR</span>
+              </div>
+            </article>
+
+            <!-- Player Card 3 -->
+            <article class="player-card">
+              <img src="images/d88b7297fadbf775970c90c2f48018f80bb6f2b9.png" alt="Jesús Almonte" class="player-img">
+              <div class="player-info">
+                <span class="player-number">#12</span>
+                <h3 class="player-name">Jesús Almonte</h3>
+                <span class="player-position">RECEPTOR</span>
+              </div>
+            </article>
+
+            <!-- Player Card 4 -->
+            <article class="player-card">
+              <img src="images/e48702ccfd3cbd9d299d3cd5fbeac9f91ea39e45.png" alt="Manny Peña" class="player-img">
+              <div class="player-info">
+                <span class="player-number">#7</span>
+                <h3 class="player-name">Manny Peña</h3>
+                <span class="player-position">PRIMERA BASE</span>
+              </div>
+            </article>
+
+            <!-- Player Card 5 -->
+            <article class="player-card">
+              <img src="images/f8bb8004762a8233e3c187a77222181124613f28.png" alt="Luis Martínez" class="player-img">
+              <div class="player-info">
+                <span class="player-number">#19</span>
+                <h3 class="player-name">Luis Martínez</h3>
+                <span class="player-position">CAMPOCORTO</span>
+              </div>
+            </article>
+
+            <!-- Player Card 6 -->
+            <article class="player-card">
+              <img src="images/cce1f6fc57b69d888c67217d7a433701fd5bdb55.png" alt="Julián Castro" class="player-img">
+              <div class="player-info">
+                <span class="player-number">#33</span>
+                <h3 class="player-name">Julián Castro</h3>
+                <span class="player-position">LANZADOR RELEVISTA</span>
+              </div>
+            </article>
+
+            <!-- Player Card 7 -->
+            <article class="player-card">
+              <img src="images/0fa5270c45c4ebe1e745e0d4de1fde59bd3b9728.png" alt="Nelson Rosario" class="player-img">
+              <div class="player-info">
+                <span class="player-number">#55</span>
+                <h3 class="player-name">Nelson Rosario</h3>
+                <span class="player-position">JARDINERO IZQUIERDO</span>
+              </div>
+            </article>
+
+            <!-- Player Card 8 -->
+            <article class="player-card">
+              <img src="images/ac581e67a9b368d6ea5331c04ae10aaaea83a109.png" alt="David Castillo" class="player-img">
+              <div class="player-info">
+                <span class="player-number">#8</span>
+                <h3 class="player-name">David Castillo</h3>
+                <span class="player-position">SEGUNDA BASE</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Right Column: Player Details -->
+        <aside class="roster-sidebar">
+          <h2 class="section-title">DETALLES DEL JUGADOR</h2>
+          <div class="details-card">
+            <img src="images/72b81d2355bea4dc97ee9020ad7a50bf38cfe403.png" alt="Mateo Guerrero" class="detail-img">
+
+            <div class="detail-header">
+              <div class="detail-meta">
+                <span class="player-number">#24</span>
+                <span class="player-position">JARDINERO CENTRAL</span>
+              </div>
+              <h3 class="detail-name">Mateo 'El Rayo' Guerrero</h3>
+            </div>
+
+            <div class="stats-container">
+              <h4 class="stats-title">ESTADÍSTICAS DE TEMPORADA</h4>
+              <div class="stats-table">
+                <div class="stats-row header">
+                  <span>AVG</span>
+                  <span>HR</span>
+                  <span>RBI</span>
+                  <span>OBP</span>
+                  <span>SLG</span>
+                </div>
+                <div class="stats-row body">
+                  <span>.312</span>
+                  <span>14</span>
+                  <span>42</span>
+                  <span>.389</span>
+                  <span>.520</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="detail-description">
+              Llegó al equipo en 2022 y se ha consagrado como el jugador más veloz de las bases de la liga, robándose 28
+              almohadillas en lo que va de esta campaña.
+            </p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="footer-wrapper">
+    <footer class="container site-footer">
+      <div class="footer-content">
+        <div class="brand-logo">
+          <span class="brand-white">AT</span><span class="brand-red">BALLPARK</span>
+        </div>
+        <div class="copyright">
+          <p>© 2026 ATBALLPARK - WHITEWAVE. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+
+  <script src="JS/global.js"></script>
+</body>
+
+</html>

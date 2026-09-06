@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temporada</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/globals/global.css">
+  <link rel="stylesheet" href="CSS/globals/global-sidebar.css">
+  <link rel="stylesheet" href="CSS/temporada.css">
+
+</head>
+
+<body>
+  <section class="section-header" id="main-site-header">
+    <div class="container">
+      <header class="site-header">
+        <div class="top-bar">
+          <div class="logo"><span class="text-white">AT</span><span class="text-red">BALLPARK</span></div>
+          
+          <div class="header-actions">
+            <div class="metadata">
+              <div class="live-indicator">
+                <img src="images/2_77.svg" alt="Live" class="live-dot">
+                <span class="live-text">EN VIVO: 7º INNING</span>
+              </div>
+              <div class="location">SANTIAGO, RD</div>
+            </div>
+
+            <div class="logo-hamburguesa">
+              <button class="button-menu">
+                <img src="images/menu.svg" alt="menu de opciones" class="menu-logo">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <nav class="nav-tabs">
+          <a href="index.html" class="tab">INICIO</a>
+          <a href="Principal.html" class="tab">PRINCIPAL</a>
+          <a href="historia.html" class="tab">HISTORIA</a>
+          <a href="temporada.html" class="tab active">TEMPORADA</a>
+          <a href="leyendas.html" class="tab">LEYENDAS</a>
+          <a href="roster.html" class="tab">ROSTER</a>
+          <a href="trivia.html" class="tab">TRIVIA</a>
+          <a href="Scan.html" class="tab">ESCANEAR</a>
+        </nav>
+
+
+        <div class="mobile-menu" id="mobile-menu">
+          <div class="mobile-menu-header">
+            <div class="logo">
+              <span class="text-white">AT</span><span class="text-red">BALLPARK</span>
+            </div>
+  
+            <button class="mobile-menu-close" id="mobile-menu-close">
+              <img src="images/close-menu.svg" alt="botón cerrar menú" class="close-logo">
+            </button>
+          </div>
+  
+          <nav class="mobile-nav">
+            <a href="index.html">INICIO</a>
+            <a href="Principal.html">PRINCIPAL</a>
+            <a href="historia.html">HISTORIA</a>
+            <a href="temporada.html" class="active">TEMPORADA</a> 
+            <a href="leyendas.html">LEYENDAS</a>
+            <a href="roster.html">ROSTER</a>
+            <a href="trivia.html">TRIVIA</a>
+            <a href="Scan.html">ESCANEAR</a>
+          </nav>
+        </div>
+        
+        <div class="mobile-overlay" id="mobile-overlay"></div>
+      </header>
+    </div>
+  </section>
+
+
+  <div class="combobox-equipos">
+    <input type="text" id="combo-input" placeholder="Elige un equipo..." autocomplete="off" readonly>
+    <span class="flecha">&#9662;</span>
+
+    <ul class="combo-lista" id="combo-lista">
+      <li>Rays</li>
+      <li>Yankees</li>
+      <li>Red Sox</li>
+      <li>Orioles</li>
+      <li>Blue Jays</li>
+      <li>White Sox</li>
+      <li>Guardians</li>
+      <li>Twins</li>
+      <li>Tigers</li>
+      <li>Royals</li>
+      <li>Astros</li>
+      <li>Rangers</li>
+      <li>Mariners</li>
+      <li>Athletics</li>
+      <li>Angels</li>
+    </ul>
+  </div>
+
+
+
+
+
+  <section id="section-main">
+    <div class="main-content container">
+
+      <!-- Left Column: Standings -->
+      <div class="standings-section">
+        <h2 class="section-title">TABLA DE POSICIONES</h2>
+        <div class="table-container">
+          <table class="standings-table">
+            <thead>
+              <tr>
+                <th class="col-pos">POS</th>
+                <th class="col-equipo">EQUIPO</th>
+                <th class="col-g">G</th>
+                <th class="col-p">P</th>
+                <th class="col-pct">PCT</th>
+                <th class="col-jd">JD</th>
+                <th class="col-rch">RCH</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-row">
+                <td class="col-pos">1</td>
+                <td class="col-equipo">Truenos de Santiago</td>
+                <td class="col-g">24</td>
+                <td class="col-p">12</td>
+                <td class="col-pct">.667</td>
+                <td class="col-jd">-</td>
+                <td class="col-rch text-win">G4</td>
+              </tr>
+              <tr>
+                <td class="col-pos">2</td>
+                <td class="col-equipo">Tigres de la Capital</td>
+                <td class="col-g">21</td>
+                <td class="col-p">15</td>
+                <td class="col-pct">.583</td>
+                <td class="col-jd">3.0</td>
+                <td class="col-rch text-loss">P1</td>
+              </tr>
+              <tr>
+                <td class="col-pos">3</td>
+                <td class="col-equipo">Gigantes del Este</td>
+                <td class="col-g">19</td>
+                <td class="col-p">17</td>
+                <td class="col-pct">.528</td>
+                <td class="col-jd">5.0</td>
+                <td class="col-rch text-win">G1</td>
+              </tr>
+              <tr>
+                <td class="col-pos">4</td>
+                <td class="col-equipo">Águilas del Valle</td>
+                <td class="col-g">18</td>
+                <td class="col-p">18</td>
+                <td class="col-pct">.500</td>
+                <td class="col-jd">6.0</td>
+                <td class="col-rch text-win">G2</td>
+              </tr>
+              <tr>
+                <td class="col-pos">5</td>
+                <td class="col-equipo">Leones Costeros</td>
+                <td class="col-g">14</td>
+                <td class="col-p">22</td>
+                <td class="col-pct">.389</td>
+                <td class="col-jd">10.0</td>
+                <td class="col-rch text-loss">P3</td>
+              </tr>
+              <tr>
+                <td class="col-pos">6</td>
+                <td class="col-equipo">Toros del Norte</td>
+                <td class="col-g">12</td>
+                <td class="col-p">24</td>
+                <td class="col-pct">.333</td>
+                <td class="col-jd">12.0</td>
+                <td class="col-rch text-loss">P2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Right Column: Calendar -->
+      <div class="calendar-section">
+        <h2 class="section-title">CALENDARIO DE JUEGOS</h2>
+        <div class="month-filters">
+          <button class="month-btn active">ABR</button>
+          <button class="month-btn">MAY</button>
+          <button class="month-btn">JUN</button>
+          <button class="month-btn">JUL</button>
+          <button class="month-btn">AGO</button>
+        </div>
+
+        <div class="schedule-list">
+          <!-- Schedule Item 1 -->
+          <div class="schedule-item">
+            <div class="date-opponent">
+              <div class="date-box">
+                <span class="date-day">10</span>
+                <span class="date-month">MAR</span>
+              </div>
+              <div class="divider-line"></div>
+              <div class="opponent-info">
+                <div class="opponent-name">Leones Costeros</div>
+                <div class="home-away">
+                  <img src="images/2_494.svg" alt="Local" class="icon">
+                  <span>LOCAL</span>
+                </div>
+              </div>
+            </div>
+            <div class="score-action">
+              <div class="score">G, 5-2</div>
+              <div class="game-meta final">FINAL</div>
+            </div>
+          </div>
+
+          <!-- Schedule Item 2 -->
+          <div class="schedule-item">
+            <div class="date-opponent">
+              <div class="date-box">
+                <span class="date-day">12</span>
+                <span class="date-month">MAR</span>
+              </div>
+              <div class="divider-line"></div>
+              <div class="opponent-info">
+                <div class="opponent-name">Tigres de la Capital</div>
+                <div class="home-away">
+                  <img src="images/2_497.svg" alt="Visitante" class="icon">
+                  <span>VISITANTE</span>
+                </div>
+              </div>
+            </div>
+            <div class="score-action">
+              <div class="score">P, 4-7</div>
+              <div class="game-meta final">FINAL</div>
+            </div>
+          </div>
+
+          <!-- Schedule Item 3 -->
+          <div class="schedule-item">
+            <div class="date-opponent">
+              <div class="date-box">
+                <span class="date-day">15</span>
+                <span class="date-month">MAR</span>
+              </div>
+              <div class="divider-line"></div>
+              <div class="opponent-info">
+                <div class="opponent-name">Águilas del Valle</div>
+                <div class="home-away">
+                  <img src="images/2_500.svg" alt="Local" class="icon">
+                  <span>LOCAL</span>
+                </div>
+              </div>
+            </div>
+            <div class="score-action">
+              <div class="score">5-7</div>
+              <div class="game-meta live">EN VIVO</div>
+            </div>
+          </div>
+
+          <!-- Schedule Item 4 -->
+          <div class="schedule-item">
+            <div class="date-opponent">
+              <div class="date-box">
+                <span class="date-day">18</span>
+                <span class="date-month">MAR</span>
+              </div>
+              <div class="divider-line"></div>
+              <div class="opponent-info">
+                <div class="opponent-name">Gigantes del Este</div>
+                <div class="home-away">
+                  <img src="images/2_503.svg" alt="Visitante" class="icon">
+                  <span>VISITANTE</span>
+                </div>
+              </div>
+            </div>
+            <div class="score-action">
+              <div class="game-meta time">19:00</div>
+            </div>
+          </div>
+
+          <!-- Schedule Item 5 -->
+          <div class="schedule-item">
+            <div class="date-opponent">
+              <div class="date-box">
+                <span class="date-day">22</span>
+                <span class="date-month">MAR</span>
+              </div>
+              <div class="divider-line"></div>
+              <div class="opponent-info">
+                <div class="opponent-name">Toros del Norte</div>
+                <div class="home-away">
+                  <img src="images/2_506.svg" alt="Local" class="icon">
+                  <span>LOCAL</span>
+                </div>
+              </div>
+            </div>
+            <div class="score-action">
+              <div class="game-meta time">16:00</div>
+            </div>
+          </div>
+        </div>
+
+        <button class="full-schedule-btn">VER CALENDARIO COMPLETO</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="footer-wrapper">
+    <footer class="container site-footer">
+      <div class="footer-content">
+        <div class="brand-logo">
+          <span class="brand-white">AT</span><span class="brand-red">BALLPARK</span>
+        </div>
+        <div class="copyright">
+          <p>© 2026 ATBALLPARK - WHITEWAVE. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script src="JS/global.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+#btn-escaneo {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #e52e2e;
+  color: #f4f4f6;
+  border: none;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+/* ==========================================
+   ELEVACIÓN GENERAL DE MODALES
+   ========================================== */
+#modal-escaneo, #modal-minijuego {
+  z-index: 9999;
+}
+
+/* ==========================================
+   MODAL 1: INTERFAZ DE ESCANEO
+   ========================================== */
+#modal-escaneo {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+  border: none;
+  background: transparent; 
+  padding: 0;
+  margin: 0;
+}
+
+#modal-escaneo[open] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-escaneo::backdrop {
+  background-color: rgba(0, 0, 0, 0.85); 
+}
+
+.interfaz-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 90%;
+  max-width: 400px;
+}
+
+.logo-superior {
+  width: 80%;
+  max-width: 250px;
+  min-height: 80px; 
+  object-fit: contain;
+  margin-top: 20px;
+}
+
+.espacio-modelo-3d {
+  flex-grow: 1; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caja-info {
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  color: white;
+  font-family: sans-serif;
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.5);
+}
+
+.cabecera-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.texto-info {
+  margin: 0;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.btn-info {
+  color: #00a8ff;
+  border: 1.5px solid #00a8ff;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: serif;
+  font-size: 14px;
+}
+
+.botones-accion {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.btn-rojo, .btn-verde {
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-rojo {
+  background-color: #ff3b30;
+  color: white;
+}
+
+.btn-verde {
+  background-color: #00ff66;
+  color: black;
+}
+
+/* ==========================================
+   MODAL 2: VENTANA DEL MINIJUEGO
+   ========================================== */
+#modal-minijuego {
+  width: 90%;
+  max-width: 600px;
+  border: 1px solid #2c2c35;
+  border-radius: 12px;
+  padding: 24px;
+  background-color: #121214;
+  color: #f4f4f6;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin: auto;
+  /* ELIMINAMOS EL display: block DE AQUÍ */
+}
+
+/* Los estilos de centrado van dirigidos a la imagen o al canvas */
+#modal-minijuego img {
+  display: block;
+  margin: 0 auto;
+  width: 100%; /* Ajustado para que sea responsivo */
+  max-width: 320px; /* Tamaño máximo de tu imagen */
+  height: auto;
+  border-radius: 8px;
+}
+
+#modal-minijuego::backdrop {
+  background-color: rgba(10, 10, 12, 0.85);
+  backdrop-filter: blur(5px);
+}
+
+.cerrar-modal {
+  background-color: #e52e2e;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  float: right;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-contenido-juego{
+  text-align: center;
+}
+
+
+
+
+.ui-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: 999; 
+}
+
+/* Reactivamos clicks solo para los elementos interactivos */
+.ui-layer button, .ui-layer dialog, .ui-layer a {
+    pointer-events: auto;
+}
+
+/* El botón mantiene su configuración original */
+#btn-escaneo {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}

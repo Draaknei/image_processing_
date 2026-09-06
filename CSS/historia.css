@@ -1,0 +1,299 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121214;
+  color: #f4f4f6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for section section:Hero */
+#section-hero {
+  background-color: #121214;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 800px;
+  padding: 80px 80px 0;
+}
+
+.hero-subtitle {
+  color: #e52e2e;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  color: #f4f4f6;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+  }
+  .hero-title {
+    font-size: 28px;
+  }
+}
+
+/* CSS for section section:Narrative */
+#section-narrative {
+  background-color: #121214;
+}
+
+.narrative-container {
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+  padding: 64px 80px;
+}
+
+.narrative-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+  max-width: 816px;
+}
+
+.narrative-text p {
+  color: #8e8e93;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.narrative-text p.text-highlight {
+  color: #f4f4f6;
+}
+
+.narrative-quote {
+  background-color: #1a1a1e;
+  border: 1px solid #2c2c35;
+  border-radius: 8px;
+  padding: 40px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.quote-mark {
+  color: #e52e2e;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.quote-text {
+  color: #f4f4f6;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.quote-author {
+  color: #8e8e93;
+  font-size: 14px;
+  font-style: normal;
+}
+
+@media (max-width: 1024px) {
+  .narrative-container {
+    padding-left: 40px;
+    padding-right: 40px;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .narrative-quote {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .narrative-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .narrative-quote {
+    padding: 24px;
+  }
+}
+
+/* CSS for section section:Videos */
+#section-videos {
+  background-color: #121214;
+}
+
+.videos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 0 80px 80px;
+}
+
+.videos-title {
+  color: #f4f4f6;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.video-card {
+  background-color: #1a1a1e;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+}
+
+.thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  background-color: #e52e2e;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+
+.play-button:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.play-button img {
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+}
+
+.video-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.year-tag {
+  background-color: rgba(229, 46, 46, 0.13);
+  color: #e52e2e;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.video-title {
+  color: #f4f4f6;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.video-desc {
+  color: #8e8e93;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+  .videos-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .videos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .videos-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+  }
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CSS for section section:Footer */

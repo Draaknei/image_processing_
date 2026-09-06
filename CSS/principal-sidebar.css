@@ -1,0 +1,147 @@
+/* Para el sidebar nav*/
+.menu-logo{
+  width: 3rem;
+  filter: invert();
+  visibility: hidden;
+  display: none;
+}
+
+.menu-logo:hover{
+  transform: scale(1.08);
+}
+
+.button-menu{
+  background:transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 12, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 998; /* Un punto menos que el menú */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0; 
+  width: 80%;
+  max-width: 320px;
+  height: 100vh;
+  background-color: #121214; 
+  border-left: 1px solid #2c2c35;
+  z-index: 999; 
+  transform: translateX(100%); 
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid #2c2c35;
+}
+
+.mobile-menu-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close-logo {
+  width: 24px;
+  transition: transform 0.2s;
+}
+
+.close-logo:hover {
+  transform: scale(1.1);
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 24px;
+}
+
+.mobile-nav a {
+  color: #8e8e93;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s ease;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+  color: #f4f4f6;
+}
+
+
+
+@media (max-width: 1024px) {
+  .nav-tabs {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .tab{
+    display: none;
+  }
+
+  .menu-logo{
+    display: block;
+    visibility:visible;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .top-bar,
+  .nav-tabs {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .nav-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0;
+  }
+
+  .nav-tabs .tab {
+    padding-bottom: 12px;
+  }
+}
+
+
