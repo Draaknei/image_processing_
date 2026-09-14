@@ -1,4 +1,4 @@
-#btn-escaneo {
+/* #btn-escaneo {
   position: fixed;
   bottom: 40px;
   left: 50%;
@@ -12,7 +12,7 @@
   border: none;
   border-radius: 8px;
   z-index: 1000;
-}
+} */
 
 /* ==========================================
    ELEVACIÓN GENERAL DE MODALES
@@ -201,10 +201,128 @@
     pointer-events: auto;
 }
 
-/* El botón mantiene su configuración original */
+/* AR buttons*/
+.ar-buttons {
+  position: fixed;
+
+  bottom: 40px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  width: max-content;
+
+  z-index: 999999;
+}
+
+
+/* Both buttons */
+.ar-buttons button {
+  padding: 15px 25px;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+  
+  width : 180px;
+
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
+}
+
+
 #btn-escaneo {
+  background-color: #e52e2e;
+  color: #f4f4f6;
+}
+
+
+#animate-btn {
+  background-color: #e52e2e;
+  color: #f4f4f6;
+}
+
+.ar-buttons button:active {
+  transform: scale(0.95);
+}
+
+#animate-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+@media (max-width: 500px) {
+
+  .ar-buttons {
+    bottom: 25px;
+
+    width: calc(100% - 30px);
+
+    gap: 10px;
+  }
+
+  .ar-buttons button {
+    flex: 1;
+
+    padding: 13px 15px;
+
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 350px) {
+
+  .ar-buttons {
+    gap: 7px;
+  }
+
+  .ar-buttons button {
+    padding: 11px 10px;
+    font-size: 14px;
+  }
+}
+
+/* El botón mantiene su configuración original */
+/* #btn-escaneo {
   position: fixed;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
 }
+
+#animate-btn {
+  position: fixed !important;
+
+  bottom: 40px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+
+  padding: 15px 35px !important;
+
+  font-size: 18px !important;
+  font-weight: bold !important;
+
+  cursor: pointer;
+
+  background-color: slateblue !important;
+  color: #f4f4f6 !important;
+
+  border: none !important;
+  border-radius: 8px !important;
+
+  z-index: 999999 !important;
+} */

@@ -92,8 +92,9 @@
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
         <!-- Objeto 3D que aparecerá sobre la imagen detectada -->
-        <a-entity mindar-image-target="targetIndex: 0">
+        <a-entity id="ar-target" mindar-image-target="targetIndex: 0">
             <a-gltf-model
+                id="ar-model"
                 src="models/Dandy_Yankees.glb" 
                 position="0 0 0"
                 rotation="0 0 0"
@@ -104,20 +105,23 @@
             <a-box position="0 0.2 0.1" scale="0.2 0.2 0.2" color="#FF6B6B"></a-box> -->
         </a-entity>
     </a-scene>
-
-    <!-- Cosas para cuando "escaneamos algo" -->
-
-    <button id="btn-escaneo">Escanéo</button>
-
+    <!-- Rotating animation and the other scan button brah-->
+    <div class="ar-buttons">
+        <button id="animate-btn" class="animate-btn" hidden="true">Animacion</button>
+        <!-- Cosas para cuando "escaneamos algo" -->
+    
+        <button id="btn-escaneo">Escanéo</button>
+    </div>
+    
     <!-- Primera ventana modal, donde vamos a poner el modelo 3d con la animación y todo el pedo -->
     <dialog id="modal-escaneo">
         <div class="interfaz-contenedor">
             <img src="images/logo.png" alt="Logo Superior" class="logo-superior">
-
+    
             <div class="espacio-modelo-3d" id="contenedor-3d">
                 <!-- Aquí va el modelo que no se como voy a hacer-->
             </div>
-
+    
             <div class="caja-info">
                 <div class="cabecera-info">
                     <div style="width: 26px;"></div> <!-- Espaciador temporal en lo que incluyo esto a css -->
@@ -131,7 +135,7 @@
             </div>
         </div>
     </dialog>
-
+    
     <!-- Modal 2: Ventana del Minijuego -->
     <dialog id="modal-minijuego">
         <div class="modal-contenido-juego">
@@ -141,10 +145,12 @@
             <p>Aquí irá el canvas del juego.</p>
         </div>
     </dialog>
-
+    
+    <!-- For the confetti-->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script src="JS/global.js"></script>
     <script src="JS/scriptScan.js"></script>
     
-</body>
-
-</html>
+    </body>
+    
+    </html>
