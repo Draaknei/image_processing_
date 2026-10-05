@@ -52,7 +52,7 @@ button {
 .text-loss { color: var(--loss-red) !important; }
 
 
-/* CSS for section section:Main */
+
 #section-main {
   background-color: var(--bg-main);
 }
@@ -70,7 +70,7 @@ button {
   letter-spacing: 0.5px;
 }
 
-/* Standings Table */
+
 .standings-section {
   flex: 1;
   min-width: 0;
@@ -116,7 +116,7 @@ button {
 .col-jd { width: 50px; }
 .col-rch { width: 50px; padding-right: 24px !important; font-weight: 600; }
 
-/* Calendar Section */
+
 .calendar-section {
   flex: 1;
   min-width: 0;
@@ -279,8 +279,6 @@ button {
   .score-action {
     width: 100%;
     justify-content: space-between;
-    padding-left: 64px; /* Align with text */
+    padding-left: 64px;
   }
 }
-
-/* CSS for section section:Footer */

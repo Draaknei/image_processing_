@@ -1,32 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Historia</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="CSS/historia.css">
   <link rel="stylesheet" href="CSS/globals/global.css">
   <link rel="stylesheet" href="CSS/globals/global-sidebar.css">
-
-  <style id="sections-styles">
-  </style>
-  <script src="global.js" defer></script>
+  <link rel="stylesheet" href="CSS/historia.css">
 </head>
 
 <body>
-
-  <section class="section-header">
+  <section class="section-header" id="main-site-header">
     <div class="container">
-      <header class="site-header" id="main-site-header">
+      <header class="site-header">
         <div class="top-bar">
           <div class="logo"><span class="text-white">AT</span><span class="text-red">BALLPARK</span></div>
-          
+
           <div class="header-actions">
             <div class="metadata">
               <div class="live-indicator">
@@ -55,40 +48,36 @@
           <a href="Scan.html" class="tab">ESCANEAR</a>
         </nav>
 
-
         <div class="mobile-menu" id="mobile-menu">
           <div class="mobile-menu-header">
             <div class="logo">
               <span class="text-white">AT</span><span class="text-red">BALLPARK</span>
             </div>
-  
             <button class="mobile-menu-close" id="mobile-menu-close">
               <img src="images/close-menu.svg" alt="botón cerrar menú" class="close-logo">
             </button>
           </div>
-  
+
           <nav class="mobile-nav">
             <a href="index.html">INICIO</a>
             <a href="Principal.html">PRINCIPAL</a>
             <a href="historia.html" class="active">HISTORIA</a>
-            <a href="temporada.html">TEMPORADA</a> 
+            <a href="temporada.html">TEMPORADA</a>
             <a href="leyendas.html">LEYENDAS</a>
             <a href="roster.html">ROSTER</a>
             <a href="trivia.html">TRIVIA</a>
             <a href="Scan.html">ESCANEAR</a>
           </nav>
         </div>
-        
+
         <div class="mobile-overlay" id="mobile-overlay"></div>
       </header>
     </div>
   </section>
 
-
   <div class="combobox-equipos">
     <input type="text" id="combo-input" placeholder="Elige un equipo..." autocomplete="off" readonly>
     <span class="flecha">&#9662;</span>
-
     <ul class="combo-lista" id="combo-lista">
       <li>Rays</li>
       <li>Yankees</li>
@@ -111,88 +100,49 @@
   <section id="section-hero">
     <div class="container">
       <div class="hero-content">
-        <h4 class="hero-subtitle">UNA TRADICIÓN DE GRANDEZA</h4>
-        <h1 class="hero-title">Más de Siete Décadas Escribiendo Páginas de Oro en el Béisbol Profesional</h1>
+        <h4 class="hero-subtitle" id="historia-subtitle">UNA TRADICIÓN DE GRANDEZA</h4>
+        <h1 class="hero-title" id="historia-title">Más de Siete Décadas Escribiendo Páginas de Oro</h1>
       </div>
     </div>
   </section>
 
-
   <section id="section-narrative">
     <div class="container">
       <div class="narrative-container">
-        <div class="narrative-text">
-          <p class="text-highlight">Desde su fundación oficial en el otoño de 1948, el club ha sido el epicentro
-            deportivo y el alma cultural de Santiago de los Caballeros. Surgidos bajo el manto de líderes visionarios y
-            apasionados del deporte, los Truenos no tardaron en forjar una identidad basada en la garra, el honor y el
-            béisbol de alta escuela.</p>
-          <p>A través de las décadas de los 60 y 70, la novena consolidó su posición como una potencia dominante. Las
-            gradas de madera del estadio original temblaban ante el rugido unísono de la fanaticada, impulsando
-            victorias inolvidables que hoy forman parte del folklore nacional de la liga.</p>
+        <div class="narrative-text" id="historia-narrative">
+          <p class="text-highlight">Cargando historia de la franquicia...</p>
+          <p>Por favor espere.</p>
         </div>
         <aside class="narrative-quote">
           <div class="quote-mark">“</div>
-          <blockquote class="quote-text">No jugamos solo para ganar un trofeo, jugamos por el orgullo de representar a
-            toda una región caribeña.</blockquote>
-          <cite class="quote-author">- Don Efraín Almonte, Fundador</cite>
+          <blockquote class="quote-text" id="historia-quote">Cargando cita histórica...</blockquote>
+          <cite class="quote-author" id="historia-author">- Leyenda del Equipo</cite>
         </aside>
       </div>
     </div>
   </section>
 
-
   <section id="section-videos">
     <div class="container">
       <div class="videos-container">
         <h3 class="videos-title">MOMENTOS HISTÓRICOS EN VIDEO</h3>
-        <div class="videos-grid">
-          <article class="video-card">
-            <div class="video-thumbnail">
-              <img src="images/5791344ed6a2a354f160085ee661949253d3afad.png" alt="El Nacimiento de los Truenos"
-                class="thumb-img">
-              <div class="play-button">
-                <img src="images/2_485.svg" alt="Play">
-              </div>
-            </div>
-            <div class="video-info">
-              <span class="year-tag">1948</span>
-              <h4 class="video-title">El Nacimiento de los Truenos</h4>
-              <p class="video-desc">Surgimiento en Santiago impulsado por leyendas locales.</p>
-            </div>
-          </article>
-          <article class="video-card">
-            <div class="video-thumbnail">
-              <img src="images/db0da22e53efbf148d6a794d20bc9ad8da0b4af8.png" alt="La Época de Oro del Pitcheo"
-                class="thumb-img">
-              <div class="play-button">
-                <img src="images/2_488.svg" alt="Play">
-              </div>
-            </div>
-            <div class="video-info">
-              <span class="year-tag">1975</span>
-              <h4 class="video-title">La Época de Oro del Pitcheo</h4>
-              <p class="video-desc">Establecimos récords defensivos imbatibles hasta la fecha.</p>
-            </div>
-          </article>
-          <article class="video-card">
-            <div class="video-thumbnail">
-              <img src="images/f58a24a14d8104302896d72f8db7681d0c358fe4.png" alt="El Resurgir Moderno"
-                class="thumb-img">
-              <div class="play-button">
-                <img src="images/2_491.svg" alt="Play">
-              </div>
-            </div>
-            <div class="video-info">
-              <span class="year-tag">2010</span>
-              <h4 class="video-title">El Resurgir Moderno</h4>
-              <p class="video-desc">Reconstrucción del estadio y el campeonato de las diez victorias seguidas.</p>
-            </div>
-          </article>
+
+        <div class="video-filters-container">
+          <span class="filter-label">Filtros de transmisión:</span>
+          <div class="filter-buttons">
+            <button class="btn-filter active" data-filter="normal">Normal</button>
+            <button class="btn-filter" data-filter="glitch">Vaporwave Glitch</button>
+            <button class="btn-filter" data-filter="cyberpunk">Cyberpunk</button>
+            <button class="btn-filter" data-filter="psicodelico">Psicodélico</button>
+          </div>
+        </div>
+
+        <div class="videos-grid" id="contenedor-videos">
+
         </div>
       </div>
     </div>
   </section>
-
 
   <section class="footer-wrapper">
     <footer class="container site-footer">
@@ -207,8 +157,8 @@
     </footer>
   </section>
 
-
   <script src="JS/global.js"></script>
+  <script src="JS/historia.js"></script>
 </body>
 
 </html>

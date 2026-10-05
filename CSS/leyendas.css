@@ -101,7 +101,7 @@ p {
   }
 }
 
-/* CSS for section section:Hero */
+
 #section-hero {
   background-color: var(--bg-main);
 }
@@ -139,7 +139,7 @@ p {
   }
 }
 
-/* CSS for section section:FeaturedVideo */
+
 #section-featured-video {
   background-color: var(--bg-main);
   padding: 64px 80px;
@@ -276,7 +276,7 @@ p {
   }
 }
 
-/* CSS for section section:LegendsGrid */
+
 #section-legends-grid {
   background-color: var(--bg-main);
   padding: 0 80px 80px 80px;
@@ -300,7 +300,8 @@ p {
 .card-img {
   width: 100%;
   height: 280px;
-  object-fit: cover;
+  object-fit:calc(80%);
+  object-position:center;
   display: block;
 }
 
@@ -362,4 +363,91 @@ p {
   }
 }
 
-/* CSS for section section:Footer */
+
+
+
+
+
+
+
+
+.video-filters-container {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filter-label {
+  color: var(--accent-red);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn-filter {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-filter:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.btn-filter.active {
+  background-color: var(--accent-red);
+  border-color: var(--accent-red);
+  color: #fff;
+}
+
+
+
+
+#video-iframe {
+  transition: filter 0.4s ease;
+}
+
+
+.filter-cyberpunk {
+  filter: contrast(1.5) saturate(2.5) hue-rotate(130deg);
+}
+
+
+.filter-psicodelico {
+  animation: trip-color 4s infinite linear;
+}
+
+@keyframes trip-color {
+  0% { filter: hue-rotate(0deg) saturate(2.5) contrast(1.2); }
+  100% { filter: hue-rotate(360deg) saturate(2.5) contrast(1.2); }
+}
+
+
+.filter-glitch {
+  animation: vhs-glitch 0.3s infinite;
+}
+
+@keyframes vhs-glitch {
+  0% { filter: contrast(1.2) saturate(1.5) hue-rotate(0deg); }
+  10% { filter: contrast(2) saturate(3) hue-rotate(90deg) invert(0.2); }
+  15% { filter: contrast(1.2) saturate(1.5) hue-rotate(0deg); }
+  45% { filter: contrast(1.2) saturate(1.5) hue-rotate(0deg); }
+  50% { filter: contrast(1.8) saturate(0.5) invert(0.8) hue-rotate(180deg); }
+  55% { filter: contrast(1.2) saturate(1.5) hue-rotate(0deg); }
+  100% { filter: contrast(1.2) saturate(1.5) hue-rotate(0deg); }
+}

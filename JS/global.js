@@ -1,29 +1,22 @@
 
-/* Para el navsidebar responsive */
 document.addEventListener('DOMContentLoaded', () => {
-  // Seleccionamos los elementos
   const btnOpenMenu = document.querySelector('.button-menu');
   const btnCloseMenu = document.getElementById('mobile-menu-close');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileOverlay = document.getElementById('mobile-overlay');
 
-  // Función para abrir el menú
   const openMenu = () => {
     mobileMenu.classList.add('active');
     mobileOverlay.classList.add('active');
-    // Esto evita que la página de fondo se pueda hacer scroll mientras el menú está abierto
-    document.body.style.overflow = 'hidden'; 
+    document.body.style.overflow = 'hidden';
   };
 
-  // Función para cerrar el menú
   const closeMenu = () => {
     mobileMenu.classList.remove('active');
     mobileOverlay.classList.remove('active');
-    // Devolvemos el scroll a la página normal
-    document.body.style.overflow = ''; 
+    document.body.style.overflow = '';
   };
 
-  // Asignamos los eventos de clic
   if (btnOpenMenu) {
     btnOpenMenu.addEventListener('click', openMenu);
   }
@@ -32,39 +25,102 @@ document.addEventListener('DOMContentLoaded', () => {
     btnCloseMenu.addEventListener('click', closeMenu);
   }
 
-  // Permite cerrar el menú tocando la zona oscura fuera de él
   if (mobileOverlay) {
     mobileOverlay.addEventListener('click', closeMenu);
   }
-}); 
+});
 
 
 
 
 
-/* Código para funcionamiento de los combobox de selección de equipo */
 const input = document.getElementById("combo-input");
 const lista = document.getElementById("combo-lista");
 const opciones = lista.querySelectorAll("li");
 
-/* Input para mostrar la lista cuando le demos click al input */
-input.addEventListener("focus", () =>{lista.classList.add("activa")});
 
+input.addEventListener("focus", () => { lista.classList.add("activa") });
 
-opciones.forEach(opcion=>{
-    opcion.addEventListener("click", () => {
-        input.value = opcion.textContent;
-        lista.classList.remove("activa");
-    });
+opciones.forEach(opcion => {
+  opcion.addEventListener("click", () => {
+    input.value = opcion.textContent;
+    lista.classList.remove("activa");
+  });
 });
 
-document.addEventListener("click", (evento)=>{
-    if(!input.contains(evento.target)&& !lista.contains(evento.target)){
-        lista.classList.remove("activa");
+document.addEventListener("click", (evento) => {
+  if (!input.contains(evento.target) && !lista.contains(evento.target)) {
+    lista.classList.remove("activa");
+  }
+});
+
+
+
+
+
+window.actualizarHeaderLive = async function () {
+  const MAPA_IDS = { NYY: 147, BOS: 111, BAL: 110, TB: 139, TOR: 141, CWS: 145, CLE: 114, MIN: 142, DET: 116, KC: 118, HOU: 117, TEX: 140, SEA: 136, ATH: 133, LAA: 108 };
+  const headerMetadata = document.querySelector('.header-actions .metadata') || document.querySelector('.top-bar .metadata');
+  if (!headerMetadata) return;
+  const liveIndicator = headerMetadata.querySelector('.live-indicator');
+  const liveText = headerMetadata.querySelector('.live-text');
+  const locationText = headerMetadata.querySelector('.location');
+  const codigoEquipo = localStorage.getItem("equipoSeleccionado") || "NYY";
+  const teamId = MAPA_IDS[codigoEquipo];
+  if (!teamId) return;
+  try {
+    const hoy = new Date();
+    const ayer = new Date(hoy); ayer.setDate(hoy.getDate() - 1);
+    const manana = new Date(hoy); manana.setDate(hoy.getDate() + 1);
+    const start = ayer.toISOString().split("T")[0];
+    const end = manana.toISOString().split("T")[0];
+    const url = `https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=${teamId}&startDate=${start}&endDate=${end}&hydrate=linescore,venue`;
+    const res = await fetch(url);
+    const data = await res.json();
+    let juegoEnVivo = null;
+    if (data.dates) {
+      data.dates.forEach(date => {
+        date.games.forEach(game => {
+          if (game.status && game.status.abstractGameState === "Live") {
+            juegoEnVivo = game;
+          }
+        });
+      });
     }
+    if (juegoEnVivo) {
+      const inning = juegoEnVivo.linescore?.currentInning || 1;
+      const inningState = juegoEnVivo.linescore?.inningState || "";
+      const venue = juegoEnVivo.venue?.name || "ESTADIO";
+      let parteInning = "";
+      if (inningState.toLowerCase() === "top") parteInning = "ALTA";
+      if (inningState.toLowerCase() === "bottom") parteInning = "BAJA";
+      if (liveText) liveText.textContent = `EN VIVO: ${parteInning} ${inning}º INNING`.trim();
+      if (locationText) {
+        locationText.textContent = venue.toUpperCase();
+        locationText.style.display = "block";
+      }
+      headerMetadata.style.display = "flex";
+      if (liveIndicator) liveIndicator.style.display = "flex";
+    } else {
+      if (liveIndicator) liveIndicator.style.display = "none";
+      if (locationText) locationText.style.display = "none";
+    }
+  } catch (err) {
+    console.error("Error cargando live game para el header:", err);
+    if (liveIndicator) liveIndicator.style.display = "none";
+    if (locationText) locationText.style.display = "none";
+  }
+};
+document.addEventListener('DOMContentLoaded', () => {
+  window.actualizarHeaderLive();
+  const comboOpciones = document.querySelectorAll("#combo-lista li");
+  if (comboOpciones.length > 0) {
+    comboOpciones.forEach(opcion => {
+      opcion.addEventListener("click", () => {
+        setTimeout(() => {
+          window.actualizarHeaderLive();
+        }, 100);
+      });
+    });
+  }
 });
-
-
-
-
-

@@ -29,7 +29,7 @@ a {
 
 
 
-/* Header de la página*/
+
 
 .text-white {
   color: #f4f4f6;
@@ -152,7 +152,7 @@ a {
   .top-bar {
     flex-direction: row !important;
     justify-content: space-between !important;
-    align-items: center !important; /* Esta es la magia que los alineará verticalmente */
+    align-items: center !important;
     width: 100%;
   }
 
@@ -170,7 +170,7 @@ a {
 
 
 
-/* Footer de la página */
+
 .brand-logo {
   font-size: 24px;
   font-weight: 900;
@@ -225,7 +225,7 @@ a {
 
 
 
-/* Diseño para los combobox de selección de equipo */
+
 .combobox-equipos {
   position: relative;
   width: 100%;

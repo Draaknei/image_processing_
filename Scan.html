@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>ATBALLPARK - Scan</title>
 
-    <!-- Librería A-Frame para 3D -->
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-    <!-- Librería MindAR para WebAR con reconocimiento de imagen -->
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
 
     <link rel="stylesheet" href="CSS/globals/global.css">
@@ -19,7 +17,6 @@
 
 <body>
 
-    <!-- Header original de ATBALLPARK -->
     <section class="section-header" id="main-site-header">
         <div class="container">
             <header class="site-header">
@@ -83,7 +80,6 @@
         </div>
     </section>
 
-    <!-- Escena de escaneo con una api que no vamos a usar XD -->
     <a-scene
         mindar-image="imageTargetSrc: ar_targets/targets.mind;"
         color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
@@ -91,42 +87,31 @@
 
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-        <!-- Objeto 3D que aparecerá sobre la imagen detectada -->
         <a-entity id="ar-target" mindar-image-target="targetIndex: 0">
             <a-gltf-model
                 id="ar-model"
-                src="models/Dandy_Yankees.glb" 
+                src="models/Dandy_Yankees.glb"
                 position="0 0 0"
                 rotation="0 0 0"
                 scale="0.2 0.2 0.2"
                 >
             </a-gltf-model>
-            <!-- <a-plane color="blue" opacity="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
-            <a-box position="0 0.2 0.1" scale="0.2 0.2 0.2" color="#FF6B6B"></a-box> -->
         </a-entity>
     </a-scene>
-    <!-- Rotating animation and the other scan button brah-->
     <div class="ar-buttons">
         <button id="animate-btn" class="animate-btn" hidden="true">Animacion</button>
-        <!-- Cosas para cuando "escaneamos algo" -->
-    
         <button id="btn-escaneo">Escanéo</button>
     </div>
-    
-    <!-- Primera ventana modal, donde vamos a poner el modelo 3d con la animación y todo el pedo -->
     <dialog id="modal-escaneo">
         <div class="interfaz-contenedor">
             <img src="images/logo.png" alt="Logo Superior" class="logo-superior">
-    
             <div class="espacio-modelo-3d" id="contenedor-3d">
-                <!-- Aquí va el modelo que no se como voy a hacer-->
             </div>
-    
             <div class="caja-info">
                 <div class="cabecera-info">
-                    <div style="width: 26px;"></div> <!-- Espaciador temporal en lo que incluyo esto a css -->
-                    <p class="texto-info">Información relevante a The New York Yankees</p>
-                    <a href="Principal.html" class="btn-info" title="Ir a Principal">i</a>
+                    <div style="width: 26px;"></div>
+                    <p id="texto-info-equipo" class="texto-info">Información relevante a The New York Yankees</p>
+                    <a id="btn-ir-principal" href="Principal.html?equipo=NYY" class="btn-info" title="Ir a Principal">i</a>
                 </div>
                 <div class="botones-accion">
                     <button id="btn-regresar" class="btn-rojo">Regresar</button>
@@ -135,8 +120,6 @@
             </div>
         </div>
     </dialog>
-    
-    <!-- Modal 2: Ventana del Minijuego -->
     <dialog id="modal-minijuego">
         <div class="modal-contenido-juego">
             <button id="btn-cerrar-minijuego" class="cerrar-modal">&times;</button>
@@ -145,12 +128,8 @@
             <p>Aquí irá el canvas del juego.</p>
         </div>
     </dialog>
-    
-    <!-- For the confetti-->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script src="JS/global.js"></script>
     <script src="JS/scriptScan.js"></script>
-    
     </body>
-    
     </html>

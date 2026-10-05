@@ -1,36 +1,15 @@
-/* #btn-escaneo {
-  position: fixed;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 15px 35px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  background-color: #e52e2e;
-  color: #f4f4f6;
-  border: none;
-  border-radius: 8px;
-  z-index: 1000;
-} */
 
-/* ==========================================
-   ELEVACIÓN GENERAL DE MODALES
-   ========================================== */
 #modal-escaneo, #modal-minijuego {
   z-index: 9999;
 }
 
-/* ==========================================
-   MODAL 1: INTERFAZ DE ESCANEO
-   ========================================== */
 #modal-escaneo {
   width: 100vw;
   height: 100vh;
   max-width: 100%;
   max-height: 100%;
   border: none;
-  background: transparent; 
+  background: transparent;
   padding: 0;
   margin: 0;
 }
@@ -42,7 +21,7 @@
 }
 
 #modal-escaneo::backdrop {
-  background-color: rgba(0, 0, 0, 0.85); 
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .interfaz-contenedor {
@@ -58,13 +37,13 @@
 .logo-superior {
   width: 80%;
   max-width: 250px;
-  min-height: 80px; 
+  min-height: 80px;
   object-fit: contain;
   margin-top: 20px;
 }
 
 .espacio-modelo-3d {
-  flex-grow: 1; 
+  flex-grow: 1;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -136,9 +115,6 @@
   color: black;
 }
 
-/* ==========================================
-   MODAL 2: VENTANA DEL MINIJUEGO
-   ========================================== */
 #modal-minijuego {
   width: 90%;
   max-width: 600px;
@@ -149,15 +125,13 @@
   color: #f4f4f6;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   margin: auto;
-  /* ELIMINAMOS EL display: block DE AQUÍ */
 }
 
-/* Los estilos de centrado van dirigidos a la imagen o al canvas */
 #modal-minijuego img {
   display: block;
   margin: 0 auto;
-  width: 100%; /* Ajustado para que sea responsivo */
-  max-width: 320px; /* Tamaño máximo de tu imagen */
+  width: 100%;
+  max-width: 320px;
   height: auto;
   border-radius: 8px;
 }
@@ -192,16 +166,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; 
-    z-index: 999; 
+    pointer-events: none;
+    z-index: 999;
 }
 
-/* Reactivamos clicks solo para los elementos interactivos */
 .ui-layer button, .ui-layer dialog, .ui-layer a {
     pointer-events: auto;
 }
 
-/* AR buttons*/
 .ar-buttons {
   position: fixed;
 
@@ -223,7 +195,6 @@
 }
 
 
-/* Both buttons */
 .ar-buttons button {
   padding: 15px 25px;
 
@@ -236,7 +207,7 @@
   cursor: pointer;
 
   white-space: nowrap;
-  
+
   width : 180px;
 
   transition:
@@ -295,34 +266,3 @@
     font-size: 14px;
   }
 }
-
-/* El botón mantiene su configuración original */
-/* #btn-escaneo {
-  position: fixed;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#animate-btn {
-  position: fixed !important;
-
-  bottom: 40px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-
-  padding: 15px 35px !important;
-
-  font-size: 18px !important;
-  font-weight: bold !important;
-
-  cursor: pointer;
-
-  background-color: slateblue !important;
-  color: #f4f4f6 !important;
-
-  border: none !important;
-  border-radius: 8px !important;
-
-  z-index: 999999 !important;
-} */

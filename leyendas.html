@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leyendas</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -21,7 +19,7 @@
       <header class="site-header">
         <div class="top-bar">
           <div class="logo"><span class="text-white">AT</span><span class="text-red">BALLPARK</span></div>
-          
+
           <div class="header-actions">
             <div class="metadata">
               <div class="live-indicator">
@@ -50,40 +48,32 @@
           <a href="Scan.html" class="tab">ESCANEAR</a>
         </nav>
 
-
         <div class="mobile-menu" id="mobile-menu">
           <div class="mobile-menu-header">
             <div class="logo">
               <span class="text-white">AT</span><span class="text-red">BALLPARK</span>
             </div>
-  
             <button class="mobile-menu-close" id="mobile-menu-close">
               <img src="images/close-menu.svg" alt="botón cerrar menú" class="close-logo">
             </button>
           </div>
-  
+
           <nav class="mobile-nav">
             <a href="index.html">INICIO</a>
             <a href="Principal.html">PRINCIPAL</a>
             <a href="historia.html">HISTORIA</a>
-            <a href="temporada.html">TEMPORADA</a> 
+            <a href="temporada.html">TEMPORADA</a>
             <a href="leyendas.html" class="active">LEYENDAS</a>
             <a href="roster.html">ROSTER</a>
             <a href="trivia.html">TRIVIA</a>
             <a href="Scan.html">ESCANEAR</a>
           </nav>
         </div>
-        
+
         <div class="mobile-overlay" id="mobile-overlay"></div>
       </header>
     </div>
   </section>
-  
-
-
-
-
-
 
   <div class="combobox-equipos">
     <input type="text" id="combo-input" placeholder="Elige un equipo..." autocomplete="off" readonly>
@@ -108,86 +98,46 @@
     </ul>
   </div>
 
-
-
-
   <section id="section-hero">
     <div class="hero-content container">
-      <h3 class="hero-subtitle">INMORTALES DE SANTIAGO</h3>
-      <h1 class="hero-title">Nuestras Leyendas: El Templo de la Fama de los Truenos</h1>
+      <h3 class="hero-subtitle">INMORTALES DE LA FRANQUICIA</h3>
+      <h1 class="hero-title" id="titulo-leyendas">Nuestras Leyendas: El Templo de la Fama</h1>
     </div>
   </section>
-
 
   <section id="section-featured-video">
     <div class="featured-container container">
       <div class="video-card">
         <div class="video-thumbnail">
-          <!--<img src="images/6bf7e0c04e7d76caefd4860358e843c230900279.png" alt="Video Thumbnail" class="thumb-img">-->
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"
-            allowfullscreen class="thumb-video"></iframe>
-          <div class="overlay"></div>
-          <!--<button class="play-btn" aria-label="Play Video">
-            <img src="images/2_509.svg" alt="Play Icon">
-          </button>-->
+          <iframe id="video-iframe" width="100%" height="100%" src="" title="Video Histórico" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="thumb-video"></iframe>
         </div>
         <div class="video-meta">
-          <span class="meta-tag">DOCUMENTAL EXCLUSIVO</span>
-          <h2 class="meta-title">Los Hombres que Forjaron el Trueno</h2>
-          <p class="meta-desc">Un repaso emotivo de 60 minutos por la historia de los fundadores del club, repleto de
-            testimonios inéditos y videos rescatados de archivos históricos nacionales.</p>
+          <span class="meta-tag">Historias Únicas</span>
+          <h2 class="meta-title" id="video-titulo">Cargando video...</h2>
+          <p class="meta-desc" id="video-desc">Espere un momento mientras se carga la información histórica del equipo.</p>
+
+
+          <div class="video-filters-container">
+            <span class="filter-label">Filtros de transmisión:</span>
+            <div class="filter-buttons">
+              <button class="btn-filter active" data-filter="normal">Normal</button>
+              <button class="btn-filter" data-filter="glitch">Vaporwave Glitch</button>
+              <button class="btn-filter" data-filter="cyberpunk">Cyberpunk</button>
+              <button class="btn-filter" data-filter="psicodelico">Psicodélico</button>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </div>
   </section>
 
-
   <section id="section-legends-grid">
-    <div class="grid-container container">
 
-      <article class="legend-card">
-        <img src="images/5171c3154c1bdf2577e778f3483a5423f67977d0.png" alt="Don Manuel 'El Toro' Castillo"
-          class="card-img">
-        <div class="card-content">
-          <div class="card-meta">
-            <span class="position">LANZADOR ABRIDOR</span>
-            <span class="years">1952 - 1968</span>
-          </div>
-          <h3 class="card-title">Don Manuel 'El Toro' Castillo</h3>
-          <p class="card-desc">Líder histórico de efectividad de la liga. Famoso por su implacable bola rápida y un
-            temperamento de hierro que definió el carácter de los Truenos.</p>
-        </div>
-      </article>
-
-      <article class="legend-card">
-        <img src="images/d686dcf9d3427867fdd6f3bf3e8043e77ee47a20.png" alt="Héctor 'El Cañón' Espino" class="card-img">
-        <div class="card-content">
-          <div class="card-meta">
-            <span class="position">JARDINERO DERECHO</span>
-            <span class="years">1970 - 1985</span>
-          </div>
-          <h3 class="card-title">Héctor 'El Cañón' Espino</h3>
-          <p class="card-desc">Ganador de 3 MVP de la liga. Dueño absoluto de la marca de jonrones históricos de la
-            franquicia y ídolo eterno de la fanaticada santiaguera.</p>
-        </div>
-      </article>
-
-      <article class="legend-card">
-        <img src="images/929a28f6cbd4a204948582361f86d861c52b1bec.png" alt="Ramón 'El Mago' Tejeda" class="card-img">
-        <div class="card-content">
-          <div class="card-meta">
-            <span class="position">CAMPOCORTO</span>
-            <span class="years">1992 - 2005</span>
-          </div>
-          <h3 class="card-title">Ramón 'El Mago' Tejeda</h3>
-          <p class="card-desc">Guante de Oro indiscutible por una década. Su destreza defensiva definió los campeonatos
-            de los años 90 con jugadas imposibles.</p>
-        </div>
-      </article>
-
+    <div class="grid-container container" id="contenedor-leyendas">
     </div>
   </section>
-
 
   <section class="footer-wrapper">
     <footer class="container site-footer">
@@ -202,9 +152,8 @@
     </footer>
   </section>
 
-
   <script src="JS/global.js"></script>
-
+  <script src="JS/leyendas.js"></script>
 </body>
 
 </html>
