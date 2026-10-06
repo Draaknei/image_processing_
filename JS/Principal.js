@@ -30,7 +30,7 @@ const EQUIPOS_AL = {
     aniosCampeonatos: "Campeones en: 1903, 1912, 1915, 1916, 1918, 2004, 2007, 2013 y 2018.",
     sede: "FENWAY PARK",
     descSede: "Capacidad para 37,755 fanáticos en Boston, MA.",
-    imagenEstadio: "images/estadios/fenway_park.jpg"
+    imagenEstadio: "images/stadiums/Redsox.jpg"
   },
   BAL: {
     codigo: "BAL",
@@ -44,7 +44,7 @@ const EQUIPOS_AL = {
     aniosCampeonatos: "Campeones en: 1966, 1970 y 1983.",
     sede: "CAMDEN YARDS",
     descSede: "Capacidad para 44,970 fanáticos en Baltimore, MD.",
-    imagenEstadio: "images/estadios/camden_yards.jpg"
+    imagenEstadio: "images/stadiums/oriols.jpg"
   },
   TB: {
     codigo: "TB",
@@ -58,7 +58,7 @@ const EQUIPOS_AL = {
     aniosCampeonatos: "Sin títulos de Serie Mundial (Campeones de la Liga Americana en 2008 y 2020).",
     sede: "TROPICANA FIELD",
     descSede: "Capacidad para 25,025 fanáticos en St. Petersburg, FL.",
-    imagenEstadio: "images/estadios/tropicana_field.jpg"
+    imagenEstadio: "images/stadiums/Rays.jpg"
   },
   TOR: {
     codigo: "TOR",
@@ -72,7 +72,7 @@ const EQUIPOS_AL = {
     aniosCampeonatos: "Campeones en: 1992 y 1993.",
     sede: "ROGERS CENTRE",
     descSede: "Capacidad para 39,150 fanáticos en Toronto, Canadá.",
-    imagenEstadio: "images/estadios/rogers_centre.jpg"
+    imagenEstadio: "images/stadiums/Jays.jpg"
   },
   CWS: {
     codigo: "CWS",
@@ -86,7 +86,7 @@ const EQUIPOS_AL = {
     aniosCampeonatos: "Campeones en: 1906, 1917 y 2005.",
     sede: "RATE FIELD",
     descSede: "Capacidad para 40,615 fanáticos en Chicago, IL.",
-    imagenEstadio: "images/estadios/rate_field.jpg"
+    imagenEstadio: "images/stadiums/Whitesox.jpg"
   },
   CLE: {
     codigo: "CLE",
@@ -100,7 +100,7 @@ const EQUIPOS_AL = {
     aniosCampeonatos: "Campeones en: 1920 y 1948.",
     sede: "PROGRESSIVE FIELD",
     descSede: "Capacidad para 34,820 fanáticos en Cleveland, OH.",
-    imagenEstadio: "images/estadios/progressive_field.jpg"
+    imagenEstadio: "images/stadiums/Cleveland.jpg"
   },
   MIN: {
     codigo: "MIN",
@@ -114,7 +114,7 @@ const EQUIPOS_AL = {
     aniosCampeonatos: "Campeones en: 1924, 1987 y 1991.",
     sede: "TARGET FIELD",
     descSede: "Capacidad para 38,544 fanáticos en Minneapolis, MN.",
-    imagenEstadio: "images/estadios/target_field.jpg"
+    imagenEstadio: "images/stadiums/twins.jpg"
   },
   DET: {
     codigo: "DET",
@@ -128,7 +128,7 @@ const EQUIPOS_AL = {
     aniosCampeonatos: "Campeones en: 1935, 1945, 1968 y 1984.",
     sede: "COMERICA PARK",
     descSede: "Capacidad para 41,083 fanáticos en Detroit, MI.",
-    imagenEstadio: "images/estadios/comerica_park.jpg"
+    imagenEstadio: "images/stadiums/Tigers.jpg"
   },
   KC: {
     codigo: "KC",
@@ -142,7 +142,7 @@ const EQUIPOS_AL = {
     aniosCampeonatos: "Campeones en: 1985 y 2015.",
     sede: "KAUFFMAN STADIUM",
     descSede: "Capacidad para 37,903 fanáticos en Kansas City, MO.",
-    imagenEstadio: "images/estadios/kauffman_stadium.jpg"
+    imagenEstadio: "images/stadiums/Royals.jpg"
   },
   HOU: {
     codigo: "HOU",
@@ -156,7 +156,7 @@ const EQUIPOS_AL = {
     aniosCampeonatos: "Campeones en: 2017 y 2022.",
     sede: "DAIKIN PARK",
     descSede: "Capacidad para 41,168 fanáticos en Houston, TX.",
-    imagenEstadio: "images/estadios/daikin_park.jpg"
+    imagenEstadio: "images/stadiums/Astros.jpg"
   },
   TEX: {
     codigo: "TEX",
@@ -170,7 +170,7 @@ const EQUIPOS_AL = {
     aniosCampeonatos: "Campeones en: 2023.",
     sede: "GLOBE LIFE FIELD",
     descSede: "Capacidad para 40,300 fanáticos en Arlington, TX.",
-    imagenEstadio: "images/estadios/globe_life_field.jpg"
+    imagenEstadio: "images/stadiums/Texans.jpg"
   },
   SEA: {
     codigo: "SEA",
@@ -184,7 +184,7 @@ const EQUIPOS_AL = {
     aniosCampeonatos: "Sin títulos de Serie Mundial (Récord de 116 victorias en 2001).",
     sede: "T-MOBILE PARK",
     descSede: "Capacidad para 47,929 fanáticos en Seattle, WA.",
-    imagenEstadio: "images/estadios/t_mobile_park.jpg"
+    imagenEstadio: "images/stadiums/Seattle.jpg"
   },
   ATH: {
     codigo: "ATH",
@@ -198,7 +198,7 @@ const EQUIPOS_AL = {
     aniosCampeonatos: "Campeones en: 1910, 1911, 1913, 1929, 1930, 1972, 1973, 1974 y 1989.",
     sede: "SUTTER HEALTH PARK",
     descSede: "Capacidad para 14,014 fanáticos en West Sacramento, CA.",
-    imagenEstadio: "images/estadios/sutter_health_park.jpg"
+    imagenEstadio: "images/stadiums/Okland.jpg"
   },
   LAA: {
     codigo: "LAA",
@@ -212,7 +212,7 @@ const EQUIPOS_AL = {
     aniosCampeonatos: "Campeones en: 2002.",
     sede: "ANGEL STADIUM",
     descSede: "Capacidad para 45,517 fanáticos en Anaheim, CA.",
-    imagenEstadio: "images/estadios/angel_stadium.jpg"
+    imagenEstadio: "images/stadiums/Angels.jpg"
   }
 };
 
