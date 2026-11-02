@@ -24,7 +24,7 @@
                     <div class="logo"><span class="text-white">AT</span><span class="text-red">BALLPARK</span></div>
 
                     <div class="header-actions">
-                       
+
                         <div class="logo-hamburguesa">
                             <button class="button-menu">
                                 <img src="images/menu.svg" alt="menu de opciones" class="menu-logo">
@@ -73,27 +73,25 @@
         </div>
     </section>
 
-    <a-scene
-        mindar-image="imageTargetSrc: ar_targets/targets.mind;"
-        color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
+    <a-scene mindar-image="imageTargetSrc: ar_targets/targets.mind;" color-space="sRGB"
+        renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
         device-orientation-permission-ui="enabled: false">
 
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
         <a-entity id="ar-target" mindar-image-target="targetIndex: 0">
-            <a-gltf-model
-                id="ar-model"
-                src="models/Dandy_Yankees.glb"
-                position="0 0 0"
-                rotation="0 0 0"
-                scale="0.2 0.2 0.2"
-                >
+            <a-gltf-model id="ar-model" src="models/Dandy_Yankees.glb" position="0 0 0" rotation="0 0 0"
+                scale="0.2 0.2 0.2">
             </a-gltf-model>
         </a-entity>
     </a-scene>
     <div class="ar-buttons">
         <button id="animate-btn" class="animate-btn" hidden="true">Animacion</button>
+        <button id="particle-btn" class="animate-btn" hidden="true">Particulas</button>
         <button id="btn-escaneo">Escanéo</button>
+        <button id="btn-debug-minijuego"
+            style="background: #e74c3c; color: white; border: none; padding: 10px 15px; border-radius: 5px; font-weight: bold; cursor: pointer;">Debug:
+            Jugar</button>
     </div>
     <dialog id="modal-escaneo">
         <div class="interfaz-contenedor">
@@ -104,7 +102,8 @@
                 <div class="cabecera-info">
                     <div style="width: 26px;"></div>
                     <p id="texto-info-equipo" class="texto-info">Información relevante a The New York Yankees</p>
-                    <a id="btn-ir-principal" href="Principal.html?equipo=NYY" class="btn-info" title="Ir a Principal">i</a>
+                    <a id="btn-ir-principal" href="Principal.html?equipo=NYY" class="btn-info"
+                        title="Ir a Principal">i</a>
                 </div>
                 <div class="botones-accion">
                     <button id="btn-regresar" class="btn-rojo">Regresar</button>
@@ -117,12 +116,66 @@
         <div class="modal-contenido-juego">
             <button id="btn-cerrar-minijuego" class="cerrar-modal">&times;</button>
             <h2>Zona de Minijuego</h2>
-            <img src="images/minigame.jpeg" alt="Logo Superior">
-            <p>Aquí irá el canvas del juego.</p>
+            <div id="game-container"
+                style="position: relative; width: 100%; max-width: 400px; height: 350px; overflow: hidden; margin: 0 auto; background: #000; border-radius: 8px; cursor: pointer;">
+
+                <div id="streak-label"
+                    style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.6); color: #4cd137; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; z-index: 6;">
+                    Racha: 0 🔥
+                </div>
+
+                <img id="game-image" src="images/minigame.jpeg" alt="Fondo Minijuego"
+                    style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+                <img id="baseball" src="images/baseball.png" alt="Pelota"
+                    style="position: absolute; width: 30px; height: 30px; display: none; z-index: 3;">
+
+                <div id="game-instructions"
+                    style="position: absolute; bottom: 20px; width: 100%; text-align: center; color: white; font-weight: bold; text-shadow: 1px 1px 3px black; z-index: 4;">
+                    ¡Toca la pantalla para batear!
+                </div>
+
+                <div id="hit-marker"
+                    style="position: absolute; top: 68.57%; left: 0; width: 100%; height: 9.14%; background: rgba(76, 209, 55, 0.35); border: 2px solid #4cd137; display: none; z-index: 5; pointer-events: none;">
+                </div>
+
+                <div id="win-screen"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); display: none; flex-direction: column; justify-content: center; align-items: center; z-index: 10; color: white; padding: 10px; box-sizing: border-box;">
+                    <h1 style="font-size: 2rem; color: #4cd137; margin: 0; text-shadow: 0 0 10px rgba(76,209,55,0.7);">
+                        YOU WIN</h1>
+                    <p style="margin: 2px 0; font-size: 0.95rem;">¡Home Run!</p>
+
+                    <div id="player-card-reward"
+                        style="display: flex; flex-direction: column; align-items: center; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; padding: 6px 10px; margin-top: 4px; width: 160px;">
+                        <img id="reward-player-img" src="images/logo.png" alt="Jugador"
+                            style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; border: 2px solid #4cd137; background: #111;">
+                        <span id="reward-player-name"
+                            style="margin-top: 4px; font-weight: bold; font-size: 0.8rem; text-align: center; color: #fff;">Cargando...</span>
+                        <span id="reward-player-quote"
+                            style="margin-top: 2px; font-size: 0.7rem; text-align: center; color: #a3cb38; font-style: italic;">Says
+                            : "Good job buddy"</span>
+                    </div>
+
+                    <button id="btn-reiniciar"
+                        style="margin-top: 8px; padding: 6px 14px; background: #4cd137; border: none; color: white; font-weight: bold; border-radius: 4px; cursor: pointer;">Jugar
+                        de nuevo</button>
+                </div>
+
+                <div id="loss-screen"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); display: none; flex-direction: column; justify-content: center; align-items: center; z-index: 10; color: white;">
+                    <h1
+                        style="font-size: 2.5rem; color: #ff4757; margin: 0; text-shadow: 0 0 10px rgba(255,71,87,0.7);">
+                        YOU LOSE</h1>
+                    <p style="margin-top: 10px; font-size: 1.1rem;">¡Strike Out!</p>
+                    <button id="btn-reiniciar-loss"
+                        style="margin-top: 15px; padding: 8px 16px; background: #ff4757; border: none; color: white; font-weight: bold; border-radius: 4px; cursor: pointer;">Intentar
+                        de nuevo</button>
+                </div>
+            </div>
         </div>
     </dialog>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script src="JS/global.js"></script>
     <script src="JS/scriptScan.js"></script>
-    </body>
-    </html>
+</body>
+
+</html>
