@@ -1,20 +1,39 @@
 // Keys must match the data-team attribute of the AR targets in Scan.html
+// const AL_TEAMS = {
+//     NYY: { code: "NYY", mlbId: 147, name: "The New York Yankees", model: "models/Dandy_Yankees.glb" },
+//     BOS: { code: "BOS", mlbId: 111, name: "Boston Red Sox", model: "models/Mascota_BOS.glb" },
+//     BAL: { code: "BAL", mlbId: 110, name: "Baltimore Orioles", model: "models/Mascota_BAL.glb" },
+//     TB: { code: "TB", mlbId: 139, name: "Tampa Bay Rays", model: "models/Mascota_TB.glb" },
+//     TOR: { code: "TOR", mlbId: 141, name: "Toronto Blue Jays", model: "models/Mascota_TOR.glb" },
+//     CLE: { code: "CLE", mlbId: 114, name: "Cleveland Guardians", model: "models/Mascota_CLE.glb" },
+//     CWS: { code: "CWS", mlbId: 145, name: "Chicago White Sox", model: "models/Mascota_CWS.glb" },
+//     DET: { code: "DET", mlbId: 116, name: "Detroit Tigers", model: "models/Tigers.glb" },
+//     KC: { code: "KC", mlbId: 118, name: "Kansas City Royals", model: "models/Mascota_KC.glb" },
+//     MIN: { code: "MIN", mlbId: 142, name: "Minnesota Twins", model: "models/Mascota_MIN.glb" },
+//     HOU: { code: "HOU", mlbId: 117, name: "Houston Astros", model: "models/Astros.glb" },
+//     LAA: { code: "LAA", mlbId: 108, name: "Los Angeles Angels", model: "models/Mascota_LAA.glb" },
+//     ATH: { code: "ATH", mlbId: 133, name: "Athletics", model: "models/Athletics.glb" },
+//     SEA: { code: "SEA", mlbId: 136, name: "Seattle Mariners", model: "models/Mascota_SEA.glb" },
+//     TEX: { code: "TEX", mlbId: 140, name: "Texas Rangers", model: "models/Mascota_TEX.glb" }
+// };
+
+
 const AL_TEAMS = {
     NYY: { code: "NYY", mlbId: 147, name: "The New York Yankees", model: "models/Dandy_Yankees.glb" },
-    BOS: { code: "BOS", mlbId: 111, name: "Boston Red Sox", model: "models/Mascota_BOS.glb" },
-    BAL: { code: "BAL", mlbId: 110, name: "Baltimore Orioles", model: "models/Mascota_BAL.glb" },
-    TB: { code: "TB", mlbId: 139, name: "Tampa Bay Rays", model: "models/Mascota_TB.glb" },
-    TOR: { code: "TOR", mlbId: 141, name: "Toronto Blue Jays", model: "models/Mascota_TOR.glb" },
-    CLE: { code: "CLE", mlbId: 114, name: "Cleveland Guardians", model: "models/Mascota_CLE.glb" },
-    CWS: { code: "CWS", mlbId: 145, name: "Chicago White Sox", model: "models/Mascota_CWS.glb" },
-    DET: { code: "DET", mlbId: 116, name: "Detroit Tigers", model: "models/Mascota_DET.glb" },
-    KC: { code: "KC", mlbId: 118, name: "Kansas City Royals", model: "models/Mascota_KC.glb" },
-    MIN: { code: "MIN", mlbId: 142, name: "Minnesota Twins", model: "models/Mascota_MIN.glb" },
-    HOU: { code: "HOU", mlbId: 117, name: "Houston Astros", model: "models/Mascota_HOU.glb" },
-    LAA: { code: "LAA", mlbId: 108, name: "Los Angeles Angels", model: "models/Mascota_LAA.glb" },
-    ATH: { code: "ATH", mlbId: 133, name: "Athletics", model: "models/Mascota_ATH.glb" },
-    SEA: { code: "SEA", mlbId: 136, name: "Seattle Mariners", model: "models/Mascota_SEA.glb" },
-    TEX: { code: "TEX", mlbId: 140, name: "Texas Rangers", model: "models/Mascota_TEX.glb" }
+    BOS: { code: "BOS", mlbId: 111, name: "Boston Red Sox", model: "logos/01.png" },
+    BAL: { code: "BAL", mlbId: 110, name: "Baltimore Orioles", model: "logos/02.png" },
+    TB: { code: "TB", mlbId: 139, name: "Tampa Bay Rays", model: "logos/03.png" },
+    TOR: { code: "TOR", mlbId: 141, name: "Toronto Blue Jays", model: "logos/04.png" },
+    CLE: { code: "CLE", mlbId: 114, name: "Cleveland Guardians", model: "logos/05.png" },
+    CWS: { code: "CWS", mlbId: 145, name: "Chicago White Sox", model: "logos/06.png" },
+    DET: { code: "DET", mlbId: 116, name: "Detroit Tigers", model: "models/Tigers.glb" },
+    KC: { code: "KC", mlbId: 118, name: "Kansas City Royals", model: "logos/08.png" },
+    MIN: { code: "MIN", mlbId: 142, name: "Minnesota Twins", model: "logos/09.png" },
+    HOU: { code: "HOU", mlbId: 117, name: "Houston Astros", model: "models/Astros.glb" },
+    LAA: { code: "LAA", mlbId: 108, name: "Los Angeles Angels", model: "logos/11.png" },
+    ATH: { code: "ATH", mlbId: 133, name: "Athletics", model: "models/Athletics.glb" },
+    SEA: { code: "SEA", mlbId: 136, name: "Seattle Mariners", model: "logos/13.png" },
+    TEX: { code: "TEX", mlbId: 140, name: "Texas Rangers", model: "logos/14.png" }
 };
 
 const MLB_API = "https://statsapi.mlb.com/api/v1";
@@ -73,13 +92,57 @@ function updateInfoBox(team) {
     localStorage.setItem("equipoSeleccionado", team.code);
 }
 
+// function loadModel(team, modelEl) {
+//     if (modelEl.dataset.loaded === "true") return;
+//     modelEl.dataset.loaded = "true";
+//     modelEl.addEventListener("model-error", () => {
+//         console.warn(`Could not load 3D model for ${team.code}: ${team.model}`);
+//     });
+//     modelEl.setAttribute("gltf-model", team.model);
+// }
+
 function loadModel(team, modelEl) {
     if (modelEl.dataset.loaded === "true") return;
     modelEl.dataset.loaded = "true";
-    modelEl.addEventListener("model-error", () => {
-        console.warn(`Could not load 3D model for ${team.code}: ${team.model}`);
-    });
-    modelEl.setAttribute("gltf-model", team.model);
+
+    const isGLB = team.model.toLowerCase().endsWith(".glb");
+
+    if (isGLB) {
+        modelEl.addEventListener("model-error", () => {
+            console.warn(`Could not load 3D model for ${team.code}: ${team.model}`);
+        });
+
+        modelEl.setAttribute("gltf-model", team.model);
+        return;
+    }
+
+    const image = new Image();
+
+    image.onload = () => {
+        const aspectRatio = image.naturalWidth / image.naturalHeight;
+        const maxDimension = 1.5;
+
+        const width = aspectRatio >= 1 ? maxDimension : maxDimension * aspectRatio;
+        const height = aspectRatio >= 1 ? maxDimension / aspectRatio : maxDimension;
+
+        modelEl.setAttribute("geometry", {
+            primitive: "plane",
+            width,
+            height
+        });
+
+        modelEl.setAttribute("material", {
+            src: team.model,
+            side: "double",
+            transparent: true
+        });
+    };
+
+    image.onerror = () => {
+        console.warn(`Could not load team logo for ${team.code}: ${team.model}`);
+    };
+
+    image.src = team.model;
 }
 
 function onTargetFound(team, modelEl) {
