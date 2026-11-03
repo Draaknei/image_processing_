@@ -12,6 +12,18 @@
     <link rel="stylesheet" href="CSS/globals/global.css">
     <link rel="stylesheet" href="CSS/globals/global-sidebar.css">
     <link rel="stylesheet" href="CSS/Scan.css">
+    <style>
+        .team-info { max-height: 38vh; overflow-y: auto; padding: 8px 4px; text-align: left; font-size: 0.85rem; line-height: 1.35; }
+        .team-info p { margin: 0 0 6px; }
+        .info-section { margin-top: 10px; padding-top: 8px; border-top: 1px solid rgba(128, 128, 128, 0.35); }
+        .info-title { margin: 0 0 4px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75; }
+        .info-detail { opacity: 0.8; font-size: 0.78rem; }
+        .result-chip { display: inline-block; padding: 1px 8px; margin-left: 6px; border-radius: 10px; font-size: 0.75rem; font-weight: bold; color: #fff; }
+        .result-win { background: #4cd137; }
+        .result-loss { background: #ff4757; }
+        .recent-results { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
+        .recent-results .result-chip { min-width: 22px; margin-left: 0; text-align: center; }
+    </style>
 </head>
 
 
@@ -73,16 +85,71 @@
         </div>
     </section>
 
-    <a-scene mindar-image="imageTargetSrc: ar_targets/targets.mind;" color-space="sRGB"
+    <!--
+        AR TARGETS
+        ----------
+        targetIndex = position of the team's image inside ar_targets/targets.mind.
+        The MindAR compiler numbers images in the order they are added, so compile them in
+        EXACTLY this order (0 first):
+
+         0 NYY   1 BOS   2 BAL   3 TB    4 TOR
+         5 CLE   6 CWS   7 DET   8 KC    9 MIN
+        10 HOU  11 LAA  12 ATH  13 SEA  14 TEX
+
+        data-team must match a key of AL_TEAMS in JS/scriptScan.js.
+        Entities whose image is not in the .mind file yet simply never fire.
+        To change the order, only edit the targetIndex values below.
+    -->
+    <a-scene mindar-image="imageTargetSrc: ar_targets/targets.mind; maxTrack: 1;" color-space="sRGB"
         renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
         device-orientation-permission-ui="enabled: false">
 
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-        <a-entity id="ar-target" mindar-image-target="targetIndex: 0">
-            <a-gltf-model id="ar-model" src="models/Dandy_Yankees.glb" position="0 0 0" rotation="0 0 0"
-                scale="0.2 0.2 0.2">
-            </a-gltf-model>
+        <a-entity class="ar-target" data-team="NYY" mindar-image-target="targetIndex: 0">
+            <a-entity class="team-model" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
+        </a-entity>
+        <a-entity class="ar-target" data-team="BOS" mindar-image-target="targetIndex: 1">
+            <a-entity class="team-model" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
+        </a-entity>
+        <a-entity class="ar-target" data-team="BAL" mindar-image-target="targetIndex: 2">
+            <a-entity class="team-model" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
+        </a-entity>
+        <a-entity class="ar-target" data-team="TB" mindar-image-target="targetIndex: 3">
+            <a-entity class="team-model" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
+        </a-entity>
+        <a-entity class="ar-target" data-team="TOR" mindar-image-target="targetIndex: 4">
+            <a-entity class="team-model" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
+        </a-entity>
+        <a-entity class="ar-target" data-team="CLE" mindar-image-target="targetIndex: 5">
+            <a-entity class="team-model" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
+        </a-entity>
+        <a-entity class="ar-target" data-team="CWS" mindar-image-target="targetIndex: 6">
+            <a-entity class="team-model" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
+        </a-entity>
+        <a-entity class="ar-target" data-team="DET" mindar-image-target="targetIndex: 7">
+            <a-entity class="team-model" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
+        </a-entity>
+        <a-entity class="ar-target" data-team="KC" mindar-image-target="targetIndex: 8">
+            <a-entity class="team-model" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
+        </a-entity>
+        <a-entity class="ar-target" data-team="MIN" mindar-image-target="targetIndex: 9">
+            <a-entity class="team-model" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
+        </a-entity>
+        <a-entity class="ar-target" data-team="HOU" mindar-image-target="targetIndex: 10">
+            <a-entity class="team-model" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
+        </a-entity>
+        <a-entity class="ar-target" data-team="LAA" mindar-image-target="targetIndex: 11">
+            <a-entity class="team-model" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
+        </a-entity>
+        <a-entity class="ar-target" data-team="ATH" mindar-image-target="targetIndex: 12">
+            <a-entity class="team-model" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
+        </a-entity>
+        <a-entity class="ar-target" data-team="SEA" mindar-image-target="targetIndex: 13">
+            <a-entity class="team-model" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
+        </a-entity>
+        <a-entity class="ar-target" data-team="TEX" mindar-image-target="targetIndex: 14">
+            <a-entity class="team-model" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
         </a-entity>
     </a-scene>
     <div class="ar-buttons">
@@ -90,8 +157,11 @@
         <button id="particle-btn" class="animate-btn" hidden="true">Particulas</button>
         <button id="btn-escaneo">Escanéo</button>
         <button id="btn-debug-minijuego"
-            style="background: #e74c3c; color: white; border: none; padding: 10px 15px; border-radius: 5px; font-weight: bold; cursor: pointer;">Debug:
+            style="background: #e74c3c; color: white; border: none; padding: 10px 15px; border-radius: 5px; font-weight: bold; cursor: pointer;" hidden>Debug:
             Jugar</button>
+    </div>
+    <div id="scan-toast" role="status" aria-live="polite" hidden
+        style="position: fixed; left: 50%; bottom: 110px; transform: translateX(-50%); max-width: 90%; background: rgba(0,0,0,0.8); color: #fff; padding: 10px 16px; border-radius: 8px; font-size: 0.9rem; text-align: center; z-index: 50;">
     </div>
     <dialog id="modal-escaneo">
         <div class="interfaz-contenedor">
@@ -105,6 +175,7 @@
                     <a id="btn-ir-principal" href="Principal.html?equipo=NYY" class="btn-info"
                         title="Ir a Principal">i</a>
                 </div>
+                <div id="info-equipo" class="team-info"></div>
                 <div class="botones-accion">
                     <button id="btn-regresar" class="btn-rojo">Regresar</button>
                     <button id="btn-jugar" class="btn-verde">Jugar</button>
