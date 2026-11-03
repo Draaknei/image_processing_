@@ -27,12 +27,12 @@ const DATOS_HISTORIA = {
         quote: "Este campeonato no es solo nuestro, es para todos los que esperaron 86 años.",
         author: "- David Ortiz",
         momentos: [
-            { año: "1918", titulo: "El Último Título de la Era Clásica", desc: "Victoria en la Serie Mundial antes del infame traspaso de Babe Ruth a los Yankees.", video: "https://www.youtube.com/embed/kRjZ28O_lQ0" },
-            { año: "1975", titulo: "El Jonrón de Carlton Fisk", desc: "El icónico momento donde Fisk 'empuja' la pelota hacia territorio bueno en el Juego 6.", video: "https://www.youtube.com/embed/D32uO4X_7zM" },
-            { año: "2004", titulo: "El Regreso Imposible (ALCS)", desc: "Remontada histórica tras estar abajo 0-3 en la serie frente a su eterno rival, Nueva York.", video: "https://www.youtube.com/embed/n4fCq74H1tU" },
-            { año: "2004", titulo: "Rompiendo la Maldición del Bambino", desc: "Boston barre a los Cardinals y gana la Serie Mundial rompiendo 86 años de sequía.", video: "https://www.youtube.com/embed/a70JmIuJ010" },
-            { año: "2013", titulo: "Boston Strong", desc: "David Ortiz lidera al equipo a un emotivo campeonato en Fenway tras el atentado en el maratón.", video: "https://www.youtube.com/embed/fGf7qW-1rP4" },
-            { año: "2018", titulo: "Dominio Absoluto", desc: "El mejor equipo en la historia de la franquicia gana 108 juegos y arrolla a los Dodgers en octubre.", video: "https://www.youtube.com/embed/v9qR9Y_Wc8s" }
+            { año: "1918", titulo: "El Último Título de la Era Clásica", desc: "Victoria en la Serie Mundial antes del infame traspaso de Babe Ruth a los Yankees.", video: "https://www.youtube.com/embed/Lb32zuvyhU8" },
+            { año: "1975", titulo: "El home run de Carlton Fisk", desc: "El icónico momento donde Fisk 'empuja' la pelota hacia territorio bueno en el Juego 6.", video: "https://www.youtube.com/embed/8sSLpcEtzX8" },
+            { año: "2004", titulo: "El Regreso Imposible (ALCS)", desc: "Remontada histórica tras estar abajo 0-3 en la serie frente a su eterno rival, Nueva York.", video: "https://www.youtube.com/embed/uwIe9sbAGRA" },
+            { año: "2004", titulo: "Rompiendo la Maldición del Bambino", desc: "Boston barre a los Cardinals y gana la Serie Mundial rompiendo 86 años de sequía.", video: "https://www.youtube.com/embed/5SX2mBaJYWk" },
+            { año: "2013", titulo: "Boston Strong", desc: "David Ortiz lidera al equipo a un emotivo campeonato en Fenway tras el atentado en el maratón.", video: "https://www.youtube.com/embed/cYvHNDt62nk" },
+            { año: "2018", titulo: "Dominio Absoluto", desc: "El mejor equipo en la historia de la franquicia gana 108 juegos y arrolla a los Dodgers en octubre.", video: "https://www.youtube.com/embed/60VO3svfnZI" }
         ]
     },
     BAL: {
@@ -45,12 +45,12 @@ const DATOS_HISTORIA = {
         quote: "No importa la situación, siempre jugamos el béisbol de la manera correcta.",
         author: "- Cal Ripken Jr.",
         momentos: [
-            { año: "1966", titulo: "El Primer Campeonato", desc: "Frank Robinson gana la Triple Corona y los Orioles barren a los Dodgers en la Serie Mundial.", video: "https://www.youtube.com/embed/8Kq1A_w-m2Q" },
-            { año: "1970", titulo: "El Guante de Brooks Robinson", desc: "Una exhibición defensiva inigualable en la antesala asegura el segundo título mundial del equipo.", video: "https://www.youtube.com/embed/Y0G3R0R2Djg" },
-            { año: "1983", titulo: "El Imperio de la 'Oriole Magic'", desc: "Tercer campeonato mundial liderado por el legendario mánager Earl Weaver y Cal Ripken Jr.", video: "https://www.youtube.com/embed/qJ_rM5Q4fHg" },
-            { año: "1992", titulo: "Inauguración de Camden Yards", desc: "El estadio que cambió para siempre la arquitectura moderna y retro de las Grandes Ligas.", video: "https://www.youtube.com/embed/2_Yy_T_8LFs" },
-            { año: "1995", titulo: "2,131: El Hombre de Hierro", desc: "Cal Ripken Jr. rompe el récord inquebrantable de Lou Gehrig de más juegos consecutivos.", video: "https://www.youtube.com/embed/5T5z4o5V4Sg" },
-            { año: "2014", titulo: "El Delirio de Delmon Young", desc: "Un doblete barre bases en la ALDS hace temblar Camden Yards y sella la victoria sobre Detroit.", video: "https://www.youtube.com/embed/3M8A4bO5Gk0" }
+            { año: "1966", titulo: "El Primer Campeonato", desc: "Frank Robinson gana la Triple Corona y los Orioles barren a los Dodgers en la Serie Mundial.", video: "https://www.youtube.com/embed/EUyeSNnLsWg" },
+            { año: "1970", titulo: "El Guante de Brooks Robinson", desc: "Una exhibición defensiva inigualable en la antesala asegura el segundo título mundial del equipo.", video: "https://www.youtube.com/embed/1vPn8f5swdk" },
+            { año: "1983", titulo: "El Imperio de la 'Oriole Magic'", desc: "Tercer campeonato mundial liderado por el legendario mánager Earl Weaver y Cal Ripken Jr.", video: "https://www.youtube.com/embed/RljKeshUhWc" },
+            { año: "1992", titulo: "Inauguración de Camden Yards", desc: "El estadio que cambió para siempre la arquitectura moderna y retro de las Grandes Ligas.", video: "https://www.youtube.com/embed/0CJEVt9mL2o" },
+            { año: "1995", titulo: "2,131: El Hombre de Hierro", desc: "Cal Ripken Jr. rompe el récord inquebrantable de Lou Gehrig de más juegos consecutivos.", video: "https://www.youtube.com/embed/l2JiKu_wpIU" },
+            { año: "2014", titulo: "El Delirio de Delmon Young", desc: "Un doblete barre bases en la ALDS hace temblar Camden Yards y sella la victoria sobre Detroit.", video: "https://www.youtube.com/embed/1G0moB6CjBA" }
         ]
     },
     TB: {
@@ -63,12 +63,12 @@ const DATOS_HISTORIA = {
         quote: "No tenemos el dinero de Nueva York, pero tenemos inteligencia y mucho corazón.",
         author: "- Evan Longoria",
         momentos: [
-            { año: "1998", titulo: "El Primer Juego", desc: "Inauguración de la franquicia en el Tropicana Field frente a la fanaticada floridana.", video: "https://www.youtube.com/embed/aH2lF_aEaEE" },
-            { año: "2008", titulo: "El Milagro de Tampa Bay", desc: "De ser el peor equipo en la liga a ganar el banderín de la Liga Americana.", video: "https://www.youtube.com/embed/fD_c8F6Z_sA" },
-            { año: "2011", titulo: "El Juego 162", desc: "Evan Longoria conecta un jonrón en la 12va entrada para meter al equipo dramáticamente a playoffs.", video: "https://www.youtube.com/embed/Y_aY9S_lQZk" },
-            { año: "2013", titulo: "El Juego 163 de Desempate", desc: "David Price lanza un juego completo fenomenal para vencer a los Rangers y asegurar el comodín.", video: "https://www.youtube.com/embed/v9J7s_A9w5s" },
-            { año: "2020", titulo: "El Salvamento de Brosseau", desc: "Mike Brosseau se venga de Aroldis Chapman con un jonrón decisivo en la ALDS.", video: "https://www.youtube.com/embed/xQ9s6F_5eD8" },
-            { año: "2020", titulo: "El Drama del Juego 4", desc: "Brett Phillips conecta el hit de la locura en la Serie Mundial para dejar tendidos a los Dodgers.", video: "https://www.youtube.com/embed/2qXmY_M9fE4" }
+            { año: "1998", titulo: "El Primer Juego", desc: "Inauguración de la franquicia en el Tropicana Field frente a la fanaticada floridana.", video: "https://www.youtube.com/embed/ObNimjpzdMc" },
+            { año: "2008", titulo: "El Milagro de Tampa Bay", desc: "De ser el peor equipo en la liga a ganar el banderín de la Liga Americana.", video: "https://www.youtube.com/embed/sBKQq1xq4OI" },
+            { año: "2011", titulo: "El Juego 162", desc: "Evan Longoria conecta un home run en la 12va entrada para meter al equipo dramáticamente a playoffs.", video: "https://www.youtube.com/embed/BvFGSSY75pw" },
+            { año: "2013", titulo: "El Juego 163 de Desempate", desc: "David Price lanza un juego completo fenomenal para vencer a los Rangers y asegurar el comodín.", video: "https://www.youtube.com/embed/lAVINjJC3mM" },
+            { año: "2020", titulo: "El Salvamento de Brosseau", desc: "Mike Brosseau se venga de Aroldis Chapman con un home run decisivo en la ALDS.", video: "https://www.youtube.com/embed/cy-fwHC7EEU" },
+            { año: "2020", titulo: "El Drama del Juego 4", desc: "Brett Phillips conecta el hit de la locura en la Serie Mundial para dejar tendidos a los Dodgers.", video: "https://www.youtube.com/embed/SCG5sZtTpCc" }
         ]
     },
     TOR: {
@@ -78,15 +78,15 @@ const DATOS_HISTORIA = {
         title: "Bicampeones Mundiales al Norte de la Frontera",
         p1: "Desde su debut en el gélido Exhibition Stadium en 1977, los Blue Jays se convirtieron en los embajadores del béisbol en Canadá. La pasión desbordante del país entero los llevó a construir el imponente SkyDome.",
         p2: "En los años noventa, formaron una maquinaria ofensiva indetenible que conquistó Series Mundiales consecutivas, dejando momentos icónicos que redefinieron el entusiasmo y el orgullo deportivo canadiense.",
-        quote: "Ese jonrón no fue solo para nosotros, fue para 30 millones de canadienses.",
+        quote: "Ese home run no fue solo para nosotros, fue para 30 millones de canadienses.",
         author: "- Joe Carter",
         momentos: [
-            { año: "1977", titulo: "El Béisbol Llega a Toronto", desc: "El primer partido en la historia de la franquicia jugado bajo la nieve.", video: "https://www.youtube.com/embed/rV1H_4M_zU4" },
-            { año: "1992", titulo: "Primer Campeonato Canadiense", desc: "Roberto Alomar y los Blue Jays llevan el Trofeo del Comisionado fuera de los EE.UU. por primera vez.", video: "https://www.youtube.com/embed/wP1uX_v2Gcw" },
-            { año: "1993", titulo: "Touch 'Em All, Joe!", desc: "Joe Carter conecta un cuadrangular en la 9na entrada para ganar la Serie Mundial, dejando a los Phillies en el terreno.", video: "https://www.youtube.com/embed/-F5HwiGm7Gk" },
-            { año: "2015", titulo: "El Épico Bat Flip", desc: "José Bautista conecta un dramático jonrón de 3 carreras y lanza el bate en el Juego 5 de la ALDS.", video: "https://www.youtube.com/embed/61spAt92APc" },
-            { año: "2016", titulo: "Walk-off en el Wild Card", desc: "Edwin Encarnación dispara un cuadrangular en entradas extras para vencer a los Orioles.", video: "https://www.youtube.com/embed/9Bv_3yG0_74" },
-            { año: "2021", titulo: "El Despertar de Vladdy Jr.", desc: "Vladimir Guerrero Jr. desata su poder generacional peleando por la Triple Corona de la liga.", video: "https://www.youtube.com/embed/bLz-R8Jg60Y" }
+            { año: "1977", titulo: "El Béisbol Llega a Toronto", desc: "El primer partido en la historia de la franquicia jugado bajo la nieve.", video: "https://www.youtube.com/embed/IPhtFDVLcpI" },
+            { año: "1992", titulo: "Primer Campeonato Canadiense", desc: "Roberto Alomar y los Blue Jays llevan el Trofeo del Comisionado fuera de los EE.UU. por primera vez.", video: "https://www.youtube.com/embed/mfdbX-C5Qxk" },
+            { año: "1993", titulo: "Touch 'Em All, Joe!", desc: "Joe Carter conecta un cuadrangular en la 9na entrada para ganar la Serie Mundial, dejando a los Phillies en el terreno.", video: "https://www.youtube.com/embed/_20q_xoka9o" },
+            { año: "2015", titulo: "El Épico Bat Flip", desc: "José Bautista conecta un dramático home run de 3 carreras y lanza el bate en el Juego 5 de la ALDS.", video: "https://www.youtube.com/embed/h1i9GdN7_bE" },
+            { año: "2016", titulo: "Walk-off en el Wild Card", desc: "Edwin Encarnación dispara un cuadrangular en entradas extras para vencer a los Orioles.", video: "https://www.youtube.com/embed/fYYkEE5OlmA" },
+            { año: "2021", titulo: "El Despertar de Vladdy Jr.", desc: "Vladimir Guerrero Jr. desata su poder generacional peleando por la Triple Corona de la liga.", video: "https://www.youtube.com/embed/cGg-0OTKUqk" }
         ]
     },
     CWS: {
@@ -99,12 +99,12 @@ const DATOS_HISTORIA = {
         quote: "En el lado sur de Chicago no nos rendimos, peleamos hasta el último out.",
         author: "- Paul Konerko",
         momentos: [
-            { año: "1906", titulo: "Los Hitless Wonders", desc: "Primer campeonato de la franquicia venciendo sorpresivamente a sus vecinos, los Cubs.", video: "https://www.youtube.com/embed/jZ_y-A-Z-Kk" },
-            { año: "1919", titulo: "El Escándalo de los Black Sox", desc: "Ocho jugadores son suspendidos de por vida, cambiando las reglas de integridad del béisbol para siempre.", video: "https://www.youtube.com/embed/xR2S9_zX6gU" },
-            { año: "1959", titulo: "Los Go-Go White Sox", desc: "Un equipo basado en la velocidad y la defensa gana el banderín de la Liga Americana tras 40 años.", video: "https://www.youtube.com/embed/l5J-K9k3qgY" },
-            { año: "2005", titulo: "El Grand Slam de Konerko", desc: "Paul Konerko hace explotar U.S. Cellular Field con un grand slam en el Juego 2 de la Serie Mundial.", video: "https://www.youtube.com/embed/hO3-Jq0p-08" },
-            { año: "2005", titulo: "El Fin de la Sequía", desc: "Con 4 juegos completos consecutivos en la ALCS y una barrida en la final, ganan el título 88 años después.", video: "https://www.youtube.com/embed/Q0F_x0_rGcw" },
-            { año: "2009", titulo: "El Juego Perfecto de Buehrle", desc: "Mark Buehrle retira a los 27 bateadores de los Rays gracias a una icónica atrapada de DeWayne Wise.", video: "https://www.youtube.com/embed/Xq-J4z3C0_w" }
+            { año: "1906", titulo: "Los Hitless Wonders", desc: "Primer campeonato de la franquicia venciendo sorpresivamente a sus vecinos, los Cubs.", video: "https://www.youtube.com/embed/y4UCPKWhgZM" },
+            { año: "1919", titulo: "El Escándalo de los Black Sox", desc: "Ocho jugadores son suspendidos de por vida, cambiando las reglas de integridad del béisbol para siempre.", video: "https://www.youtube.com/embed/pCFVoeZhRfU" },
+            { año: "1959", titulo: "Los Go-Go White Sox", desc: "Un equipo basado en la velocidad y la defensa gana el banderín de la Liga Americana tras 40 años.", video: "https://www.youtube.com/embed/DNRy5UXqeN8" },
+            { año: "2005", titulo: "El Grand Slam de Konerko", desc: "Paul Konerko hace explotar U.S. Cellular Field con un grand slam en el Juego 2 de la Serie Mundial.", video: "https://www.youtube.com/embed/DhdcK0PdH-I" },
+            { año: "2005", titulo: "El Fin de la Sequía", desc: "Con 4 juegos completos consecutivos en la ALCS y una barrida en la final, ganan el título 88 años después.", video: "https://www.youtube.com/embed/tpz52g0Ez10" },
+            { año: "2009", titulo: "El Juego Perfecto de Buehrle", desc: "Mark Buehrle retira a los 27 bateadores de los Rays gracias a una icónica atrapada de DeWayne Wise.", video: "https://www.youtube.com/embed/FU2jfMjyECE" }
         ]
     },
     CLE: {
@@ -117,12 +117,12 @@ const DATOS_HISTORIA = {
         quote: "Nuestra afición ha soportado mucho, y cada vez que saltamos al campo jugamos por ellos.",
         author: "- Jim Thome",
         momentos: [
-            { año: "1920", titulo: "El Primer Campeonato y un Triple Play", desc: "Bill Wambsganss ejecuta el único triple play sin asistencia en la historia de las Series Mundiales.", video: "https://www.youtube.com/embed/5H_pZ-x_CjY" },
-            { año: "1948", titulo: "El Título con Bob Feller", desc: "Apoyados en el legendario Satchel Paige y Bob Feller, Cleveland gana su segunda y más reciente corona.", video: "https://www.youtube.com/embed/N-0S_yXhP9Y" },
-            { año: "1995", titulo: "La Locura del Jacobs Field", desc: "Un equipo ofensivo devastador gana 100 juegos en una temporada recortada y rompe décadas de malos resultados.", video: "https://www.youtube.com/embed/7Vp-2_wT2n8" },
-            { año: "2016", titulo: "El Jonrón de Rajai Davis", desc: "En el épico Juego 7 de la Serie Mundial, Davis empata el juego ante Aroldis Chapman desatando la locura local.", video: "https://www.youtube.com/embed/K9J-yM-N4F0" },
-            { año: "2017", titulo: "La Racha de 22 Victorias", desc: "Cleveland impone el récord moderno de la Liga Americana con 22 triunfos de manera consecutiva.", video: "https://www.youtube.com/embed/C2wH2gZJ2T0" },
-            { año: "2022", titulo: "El Jonrón de Oscar González", desc: "El dominicano deja en el terreno a los Yankees en playoffs bajo la canción de Bob Esponja.", video: "https://www.youtube.com/embed/B_UoP7A2V04" }
+            { año: "1920", titulo: "El Primer Campeonato y un Triple Play", desc: "Bill Wambsganss ejecuta el único triple play sin asistencia en la historia de las Series Mundiales.", video: "https://www.youtube.com/embed/TEXXG7h3PTE" },
+            { año: "1948", titulo: "El Título con Bob Feller", desc: "Apoyados en el legendario Satchel Paige y Bob Feller, Cleveland gana su segunda y más reciente corona.", video: "https://www.youtube.com/embed/wC56Rgws1vI" },
+            { año: "1995", titulo: "La Locura del Jacobs Field", desc: "Un equipo ofensivo devastador gana 100 juegos en una temporada recortada y rompe décadas de malos resultados.", video: "https://www.youtube.com/embed/83rUGWIPV6Q" },
+            { año: "2016", titulo: "El home run de Rajai Davis", desc: "En el épico Juego 7 de la Serie Mundial, Davis empata el juego ante Aroldis Chapman desatando la locura local.", video: "https://www.youtube.com/embed/yeBqNBQLoz4" },
+            { año: "2017", titulo: "La Racha de 22 Victorias", desc: "Cleveland impone el récord moderno de la Liga Americana con 22 triunfos de manera consecutiva.", video: "https://www.youtube.com/embed/lNWxVY12w0c" },
+            { año: "2022", titulo: "El walk off de Oscar González", desc: "El dominicano deja en el terreno a los Yankees en playoffs", video: "https://www.youtube.com/embed/KtmL2Wm9nec" }
         ]
     },
     MIN: {
@@ -135,12 +135,12 @@ const DATOS_HISTORIA = {
         quote: "Aquí no compramos campeonatos, los ganamos con trabajo en equipo y fundamentos.",
         author: "- Tom Kelly (Mánager)",
         momentos: [
-            { año: "1965", titulo: "Primer Banderín en Minnesota", desc: "Liderados por Harmon Killebrew y Tony Oliva, los Twins conquistan la Liga Americana.", video: "https://www.youtube.com/embed/aP9E_R-9L7Y" },
-            { año: "1987", titulo: "Campeones de la 'Homer Hanky'", desc: "Con la afición agitando sus pañuelos, los Twins ganan el primer campeonato de su historia frente a St. Louis.", video: "https://www.youtube.com/embed/6UjT_2p4R8o" },
-            { año: "1991", titulo: "El Juego 6 de Kirby Puckett", desc: "El legendario 'And we'll see you tomorrow night!' tras su dramático jonrón para forzar el Juego 7.", video: "https://www.youtube.com/embed/N-0L_nO4XU8" },
-            { año: "1991", titulo: "La Obra Maestra de Jack Morris", desc: "Morris lanza 10 entradas en blanco en el Juego 7 para darle a Minnesota su segundo título mundial.", video: "https://www.youtube.com/embed/XqE-3jM_Qjg" },
-            { año: "2009", titulo: "El Juego 163 vs Detroit", desc: "Un épico maratón de 12 entradas que aseguró el título divisional en el último juego de temporada regular del Metrodome.", video: "https://www.youtube.com/embed/9BqO2l14qF8" },
-            { año: "2023", titulo: "Fin a la Maldición de los Playoffs", desc: "Minnesota rompe la histórica racha de 18 derrotas consecutivas en postemporada venciendo a Toronto.", video: "https://www.youtube.com/embed/H_U22p99B6A" }
+            { año: "1965", titulo: "Primer Banderín en Minnesota", desc: "Liderados por Harmon Killebrew y Tony Oliva, los Twins conquistan la Liga Americana.", video: "https://www.youtube.com/embed/66ba-C0G_wU" },
+            { año: "1987", titulo: "Campeones de la 'Homer Hanky'", desc: "Con la afición agitando sus pañuelos, los Twins ganan el primer campeonato de su historia frente a St. Louis.", video: "https://www.youtube.com/embed/i9gs4xyv2uc" },
+            { año: "1991", titulo: "El Juego 6 de Kirby Puckett", desc: "El legendario 'And we'll see you tomorrow night!' tras su dramático home run para forzar el Juego 7.", video: "https://www.youtube.com/embed/QihQL8cZyZc" },
+            { año: "1991", titulo: "La Obra Maestra de Jack Morris", desc: "Morris lanza 10 entradas en blanco en el Juego 7 para darle a Minnesota su segundo título mundial.", video: "https://www.youtube.com/embed/-DY6Z8INaMQ" },
+            { año: "2009", titulo: "El Juego 163 vs Detroit", desc: "Un épico maratón de 12 entradas que aseguró el título divisional en el último juego de temporada regular del Metrodome.", video: "https://www.youtube.com/embed/jBFNkkReQeg" },
+            { año: "2023", titulo: "Fin a la Maldición de los Playoffs", desc: "Minnesota rompe la histórica racha de 18 derrotas consecutivas en postemporada venciendo a Toronto.", video: "https://www.youtube.com/embed/bj1smNKVp6A" }
         ]
     },
     DET: {
@@ -153,12 +153,12 @@ const DATOS_HISTORIA = {
         quote: "No hay sonido más dulce en Detroit que el crujido de un bate conectado en el Comerica Park.",
         author: "- Al Kaline",
         momentos: [
-            { año: "1968", titulo: "El Título de Mickey Lolich", desc: "Lolich gana tres juegos en la Serie Mundial y levanta el espíritu de una ciudad afectada por tensiones sociales.", video: "https://www.youtube.com/embed/5H_pZ-x_CjY" },
-            { año: "1984", titulo: "Bless You Boys", desc: "Liderando de principio a fin la temporada, Sparky Anderson y los Tigres aplastan a los Padres en la final.", video: "https://www.youtube.com/embed/N-0S_yXhP9Y" },
-            { año: "2006", titulo: "El Jonrón de Magglio Ordoñez", desc: "Un cuadrangular épico en el Juego 4 de la ALCS manda a los Tigres de vuelta a la Serie Mundial ante el delirio total.", video: "https://www.youtube.com/embed/7Vp-2_wT2n8" },
-            { año: "2012", titulo: "La Triple Corona de Miggy", desc: "Miguel Cabrera se convierte en el primer jugador en 45 años en liderar la liga en Promedio, Jonrones y Empujadas.", video: "https://www.youtube.com/embed/K9J-yM-N4F0" },
-            { año: "2013", titulo: "El Dominio de la Rotación", desc: "Max Scherzer gana el Cy Young y la rotación impone el récord de más ponches en la historia de la liga.", video: "https://www.youtube.com/embed/C2wH2gZJ2T0" },
-            { año: "2021", titulo: "El Club de los 500 para Cabrera", desc: "Miguel Cabrera conecta el cuadrangular número 500 de su carrera asegurando su lugar en Cooperstown.", video: "https://www.youtube.com/embed/B_UoP7A2V04" }
+            { año: "1968", titulo: "El Título de Mickey Lolich", desc: "Lolich gana tres juegos en la Serie Mundial y levanta el espíritu de una ciudad afectada por tensiones sociales.", video: "https://www.youtube.com/embed/C6EYS6XrC1s" },
+            { año: "1984", titulo: "Bless You Boys", desc: "Liderando de principio a fin la temporada, Sparky Anderson y los Tigres aplastan a los Padres en la final.", video: "https://www.youtube.com/embed/uThjULHBrjo" },
+            { año: "2006", titulo: "El home run de Magglio Ordoñez", desc: "Un cuadrangular épico en el Juego 4 de la ALCS manda a los Tigres de vuelta a la Serie Mundial ante el delirio total.", video: "https://www.youtube.com/embed/ZbGXgwHE_YA" },
+            { año: "2012", titulo: "La Triple Corona de Miggy", desc: "Miguel Cabrera se convierte en el primer jugador en 45 años en liderar la liga en Promedio, home runs y Empujadas.", video: "https://www.youtube.com/embed/QtqqdYWk7mA" },
+            { año: "2013", titulo: "El Dominio de la Rotación", desc: "Max Scherzer gana el Cy Young y la rotación impone el récord de más ponches en la historia de la liga.", video: "https://www.youtube.com/embed/d1dAOINrGHU" },
+            { año: "2021", titulo: "El Club de los 500 para Cabrera", desc: "Miguel Cabrera conecta el cuadrangular número 500 de su carrera asegurando su lugar en Cooperstown.", video: "https://www.youtube.com/embed/IcuSb_BORwc" }
         ]
     },
     KC: {
@@ -171,12 +171,12 @@ const DATOS_HISTORIA = {
         quote: "No somos el equipo más poderoso, somos el equipo que nunca, jamás, da un juego por perdido.",
         author: "- Salvador Pérez",
         momentos: [
-            { año: "1980", titulo: "El Primer Banderín", desc: "George Brett conecta un gigantesco jonrón en Yankee Stadium para enviar a Kansas City a su primera Serie Mundial.", video: "https://www.youtube.com/embed/kRjZ28O_lQ0" },
-            { año: "1983", titulo: "El Incidente del Pine Tar", desc: "La legendaria e histérica rabieta de George Brett luego de que le anularan un jonrón por exceso de brea en el bate.", video: "https://www.youtube.com/embed/D32uO4X_7zM" },
-            { año: "1985", titulo: "La Primera Corona de la Realeza", desc: "Los Royals remontan un 3-1 en la Serie Mundial y apalean a San Luis 11-0 en el Juego 7 decisivo.", video: "https://www.youtube.com/embed/n4fCq74H1tU" },
-            { año: "2014", titulo: "La Locura del Juego de Comodín", desc: "En uno de los juegos más épicos de la historia, remontan a Oakland en 12 entradas rompiendo 29 años de sequía.", video: "https://www.youtube.com/embed/a70JmIuJ010" },
-            { año: "2015", titulo: "El Escape Loco de Hosmer", desc: "Eric Hosmer corre hacia el home en el Juego 5 para forzar entradas extras en Nueva York.", video: "https://www.youtube.com/embed/fGf7qW-1rP4" },
-            { año: "2015", titulo: "El Retorno al Trono", desc: "Los Royals se consagran Campeones de la Serie Mundial en la 12va entrada confirmando su resiliencia absoluta.", video: "https://www.youtube.com/embed/v9qR9Y_Wc8s" }
+            { año: "1980", titulo: "El Primer Banderín", desc: "George Brett conecta un gigantesco home run en Yankee Stadium para enviar a Kansas City a su primera Serie Mundial.", video: "https://www.youtube.com/embed/6tIaFO1MGr4" },
+            { año: "1983", titulo: "El Incidente del Pine Tar", desc: "La legendaria e histérica rabieta de George Brett luego de que le anularan un home run por exceso de brea en el bate.", video: "https://www.youtube.com/embed/qLw1_UJej48" },
+            { año: "1985", titulo: "La Primera Corona de la Realeza", desc: "Los Royals remontan un 3-1 en la Serie Mundial y apalean a San Luis 11-0 en el Juego 7 decisivo.", video: "https://www.youtube.com/embed/R33g1yGq1gI" },
+            { año: "2014", titulo: "La Locura del Juego de Comodín", desc: "En uno de los juegos más épicos de la historia, remontan a Oakland en 12 entradas rompiendo 29 años de sequía.", video: "https://www.youtube.com/embed/z2K9oN9co-M" },
+            { año: "2015", titulo: "El Escape Loco de Hosmer", desc: "Eric Hosmer corre hacia el home en el Juego 5 para forzar entradas extras en Nueva York.", video: "https://www.youtube.com/embed/eIcFNfxXtdY" },
+            { año: "2015", titulo: "El Retorno al Trono", desc: "Los Royals se consagran Campeones de la Serie Mundial en la 12va entrada confirmando su resiliencia absoluta.", video: "https://www.youtube.com/embed/Cdj5g_2DDEQ" }
         ]
     },
     HOU: {
@@ -190,11 +190,11 @@ const DATOS_HISTORIA = {
         author: "- José Altuve",
         momentos: [
             { año: "1965", titulo: "La Octava Maravilla", desc: "Inauguración del Astrodome, el primer estadio completamente techado del mundo.", video: "https://www.youtube.com/embed/UEjIcjTefDc" },
-            { año: "1986", titulo: "El Maratón de 16 Entradas", desc: "Épico enfrentamiento de pitcheo en la postemporada contra los New York Mets.", video: "https://www.youtube.com/embed/9BqO2l14qF8" },
-            { año: "2005", titulo: "Primer Banderín", desc: "Los Astros ganan su primer pase a la Serie Mundial bajo el liderazgo de las Abejas Asesinas y Roy Oswalt.", video: "https://www.youtube.com/embed/xL6_d-zB038" },
-            { año: "2017", titulo: "Campeones Mundiales", desc: "Houston se consagra por primera vez en la historia en un emocionante Juego 7 contra los Dodgers.", video: "https://www.youtube.com/embed/XqEITLq0u2Y" },
-            { año: "2019", titulo: "El Jonrón de Altuve", desc: "José Altuve conecta un icónico cuadrangular ante Aroldis Chapman para dejar tendidos a los Yankees y ganar el banderín.", video: "https://www.youtube.com/embed/J7t6l9lH3cM" },
-            { año: "2022", titulo: "El No-Hitter Combinado", desc: "Cristian Javier y el bullpen logran un histórico sin hit ni carrera en la Serie Mundial rumbo a su segundo título.", video: "https://www.youtube.com/embed/hO-C0i_VnFE" }
+            { año: "1986", titulo: "El Maratón de 16 Entradas", desc: "Épico enfrentamiento de pitcheo en la postemporada contra los New York Mets.", video: "https://www.youtube.com/embed/-t23pOQo-sQ" },
+            { año: "2005", titulo: "Primer Banderín", desc: "Los Astros ganan su primer pase a la Serie Mundial bajo el liderazgo de las Abejas Asesinas y Roy Oswalt.", video: "https://www.youtube.com/embed/aq7ZajCP2qo" },
+            { año: "2017", titulo: "Campeones Mundiales", desc: "Houston se consagra por primera vez en la historia en un emocionante Juego 7 contra los Dodgers.", video: "https://www.youtube.com/embed/-FmM-wbo9oc" },
+            { año: "2019", titulo: "El home run de Altuve", desc: "José Altuve conecta un icónico cuadrangular ante Aroldis Chapman para dejar tendidos a los Yankees y ganar el banderín.", video: "https://www.youtube.com/embed/NbDmAPife-s" },
+            { año: "2022", titulo: "El No-Hitter Combinado", desc: "Cristian Javier y el bullpen logran un histórico sin hit ni carrera en la Serie Mundial rumbo a su segundo título.", video: "https://www.youtube.com/embed/MwaTT-5LFZA" }
         ]
     },
     TEX: {
@@ -207,12 +207,12 @@ const DATOS_HISTORIA = {
         quote: "El camino fue largo y doloroso, pero finalmente la gloria de octubre llegó a Texas.",
         author: "- Corey Seager",
         momentos: [
-            { año: "1991", titulo: "El Séptimo No-Hitter", desc: "A sus 44 años, la leyenda Nolan Ryan lanza el séptimo juego sin hit ni carrera de su mítica trayectoria.", video: "https://www.youtube.com/embed/8Kq1A_w-m2Q" },
-            { año: "1996", titulo: "El Primer Título Divisional", desc: "Bajo la batuta de Johnny Oates, el equipo de Juan González asegura su primer viaje histórico a los playoffs.", video: "https://www.youtube.com/embed/Y0G3R0R2Djg" },
-            { año: "2010", titulo: "Banderín de la Americana", desc: "Vencen a los temibles Yankees con el ponche decisivo de Neftalí Feliz para ir a su primera Serie Mundial.", video: "https://www.youtube.com/embed/qJ_rM5Q4fHg" },
-            { año: "2011", titulo: "El Drama del Juego 6", desc: "A un solo strike del campeonato en dos ocasiones distintas, sufren la derrota más desgarradora de su historia.", video: "https://www.youtube.com/embed/2_Yy_T_8LFs" },
-            { año: "2015", titulo: "La Épica Rivalidad del Séptimo Inning", desc: "Un juego salvaje en Toronto de 53 minutos donde Texas y Blue Jays intercambian jugadas insólitas.", video: "https://www.youtube.com/embed/5T5z4o5V4Sg" },
-            { año: "2023", titulo: "Campeones del Mundo", desc: "Imbatibles como visitantes, los Rangers consiguen el primer campeonato de su historia venciendo a Arizona.", video: "https://www.youtube.com/embed/1Q2w3e4r5t6" }
+            { año: "1991", titulo: "El Séptimo No-Hitter", desc: "A sus 44 años, la leyenda Nolan Ryan lanza el séptimo juego sin hit ni carrera de su mítica trayectoria.", video: "https://www.youtube.com/embed/WeB8Cu2t8AU" },
+            { año: "1996", titulo: "El Primer Título Divisional", desc: "Bajo la batuta de Johnny Oates, el equipo de Juan González asegura su primer viaje histórico a los playoffs.", video: "https://www.youtube.com/embed/nHQZ04kH44Q" },
+            { año: "2010", titulo: "Banderín de la Americana", desc: "Vencen a los temibles Yankees con el ponche decisivo de Neftalí Feliz para ir a su primera Serie Mundial.", video: "https://www.youtube.com/embed/mAHPo5k_tbM" },
+            { año: "2011", titulo: "El Drama del Juego 6", desc: "A un solo strike del campeonato en dos ocasiones distintas, sufren la derrota más desgarradora de su historia.", video: "https://www.youtube.com/embed/_4cd3XzzqMw" },
+            { año: "2015", titulo: "La Épica Rivalidad del Séptimo Inning", desc: "Un juego salvaje en Toronto de 53 minutos donde Texas y Blue Jays intercambian jugadas insólitas.", video: "https://www.youtube.com/embed/IqS9RAAKffw" },
+            { año: "2023", titulo: "Campeones del Mundo", desc: "Imbatibles como visitantes, los Rangers consiguen el primer campeonato de su historia venciendo a Arizona.", video: "https://www.youtube.com/embed/kd7I24c_DBg" }
         ]
     },
     SEA: {
@@ -225,12 +225,12 @@ const DATOS_HISTORIA = {
         quote: "No se trata de ganar todos los días, se trata de hacer que los fanáticos se levanten de sus asientos.",
         author: "- Ken Griffey Jr.",
         momentos: [
-            { año: "1995", titulo: "The Double", desc: "El legendario doblete de Edgar Martínez que salvó a la franquicia de la reubicación en una dramática ALDS.", video: "https://www.youtube.com/embed/aH2lF_aEaEE" },
-            { año: "2001", titulo: "Las 116 Victorias", desc: "Liderados por el novato maravilla Ichiro Suzuki, los Mariners empatan el récord histórico de victorias en una temporada.", video: "https://www.youtube.com/embed/fD_c8F6Z_sA" },
-            { año: "2004", titulo: "Los 262 Hits de Ichiro", desc: "Ichiro rompe el mítico récord de George Sisler de más imparables en una sola temporada regular.", video: "https://www.youtube.com/embed/Y_aY9S_lQZk" },
-            { año: "2012", titulo: "El Juego Perfecto del Rey", desc: "Félix Hernández paraliza al mundo del béisbol lanzando el primer juego perfecto en la historia del club.", video: "https://www.youtube.com/embed/v9J7s_A9w5s" },
-            { año: "2022", titulo: "El Fin de la Sequía", desc: "Cal Raleigh conecta un dramático cuadrangular para romper una racha de 21 años sin entrar a postemporada.", video: "https://www.youtube.com/embed/xQ9s6F_5eD8" },
-            { año: "2022", titulo: "La Gran Remontada del Wild Card", desc: "Seattle se levanta de un déficit de 7 carreras ante Toronto en ruta a su primer triunfo en playoffs en décadas.", video: "https://www.youtube.com/embed/7Y6u5i4o3p2" }
+            { año: "1995", titulo: "The Double", desc: "El legendario doblete de Edgar Martínez que salvó a la franquicia de la reubicación en una dramática ALDS.", video: "https://www.youtube.com/embed/fljZ_QilQMQ" },
+            { año: "2001", titulo: "Las 116 Victorias", desc: "Liderados por el novato maravilla Ichiro Suzuki, los Mariners empatan el récord histórico de victorias en una temporada.", video: "https://www.youtube.com/embed/LkcAlwo3OPk" },
+            { año: "2004", titulo: "Los 262 Hits de Ichiro", desc: "Ichiro rompe el mítico récord de George Sisler de más imparables en una sola temporada regular.", video: "https://www.youtube.com/embed/0dVYgve5Atc" },
+            { año: "2012", titulo: "El Juego Perfecto del Rey", desc: "Félix Hernández paraliza al mundo del béisbol lanzando el primer juego perfecto en la historia del club.", video: "https://www.youtube.com/embed/TCErGtthSG8" },
+            { año: "2022", titulo: "El Fin de la Sequía", desc: "Cal Raleigh conecta un dramático cuadrangular para romper una racha de 21 años sin entrar a postemporada.", video: "https://www.youtube.com/embed/dzbaUKFi1Rs" },
+            { año: "2022", titulo: "La Gran Remontada del Wild Card", desc: "Seattle se levanta de un déficit de 7 carreras ante Toronto en ruta a su primer triunfo en playoffs en décadas.", video: "https://www.youtube.com/embed/SmJAl8bqmTc" }
         ]
     },
     ATH: {
@@ -243,12 +243,12 @@ const DATOS_HISTORIA = {
         quote: "Tratamos de comprar triunfos, no jugadores. Ese es el arte de este juego.",
         author: "- Billy Beane",
         momentos: [
-            { año: "1972", titulo: "El Inicio del 'Mustache Gang'", desc: "La era de Rollie Fingers, Catfish Hunter y Reggie Jackson inicia ganando tres títulos mundiales consecutivos.", video: "https://www.youtube.com/embed/rV1H_4M_zU4" },
-            { año: "1989", titulo: "La Serie de la Bahía", desc: "Los Athletics de Ricky Henderson y José Canseco barren a los Giants en medio del trágico terremoto de Loma Prieta.", video: "https://www.youtube.com/embed/wP1uX_v2Gcw" },
-            { año: "1991", titulo: "El Rey del Robo", desc: "Rickey Henderson levanta la base en lo alto tras romper el récord histórico de bases robadas de Lou Brock.", video: "https://www.youtube.com/embed/-F5HwiGm7Gk" },
-            { año: "2002", titulo: "La Racha de 20 Victorias", desc: "Scott Hatteberg conecta un dramático jonrón (inmortalizado en el cine) para sellar el récord de la franquicia.", video: "https://www.youtube.com/embed/9M8n7b6v5c4" },
-            { año: "2012", titulo: "Campeones en el Último Día", desc: "Con un presupuesto ínfimo, barren la última serie a Texas asegurando el título divisional de manera milagrosa.", video: "https://www.youtube.com/embed/9Bv_3yG0_74" },
-            { año: "2019", titulo: "El Último Gran Festejo en el Coliseo", desc: "Una vibrante victoria en playoffs frente a más de 54,000 ruidosos fanáticos antes del declive y mudanza del club.", video: "https://www.youtube.com/embed/bLz-R8Jg60Y" }
+            { año: "1972", titulo: "El Inicio del 'Mustache Gang'", desc: "La era de Rollie Fingers, Catfish Hunter y Reggie Jackson inicia ganando tres títulos mundiales consecutivos.", video: "https://www.youtube.com/embed/w-IFFh5j67M" },
+            { año: "1989", titulo: "La Serie de la Bahía", desc: "Los Athletics de Ricky Henderson y José Canseco barren a los Giants en medio del trágico terremoto de Loma Prieta.", video: "https://www.youtube.com/embed/TGzGuC2QwBU" },
+            { año: "1991", titulo: "El Rey del Robo", desc: "Rickey Henderson levanta la base en lo alto tras romper el récord histórico de bases robadas de Lou Brock.", video: "https://www.youtube.com/embed/FUdJyIXBsNg" },
+            { año: "2002", titulo: "La Racha de 20 Victorias", desc: "Scott Hatteberg conecta un dramático home run (inmortalizado en el cine) para sellar el récord de la franquicia.", video: "https://www.youtube.com/embed/jgGqNJSw_AQ" },
+            { año: "2012", titulo: "Campeones en el Último Día", desc: "Con un presupuesto ínfimo, barren la última serie a Texas asegurando el título divisional de manera milagrosa.", video: "https://www.youtube.com/embed/9ULsDfIK1xc" },
+            { año: "2024", titulo: "El Último Gran Festejo en el Coliseo", desc: "Una vibrante victoria en playoffs frente a más de 54,000 ruidosos fanáticos antes del declive y mudanza del club.", video: "https://www.youtube.com/embed/aq4Djn6SlxY" }
         ]
     },
     LAA: {
@@ -261,12 +261,12 @@ const DATOS_HISTORIA = {
         quote: "Crean en los milagros, porque en Anaheim los vemos suceder todo el tiempo.",
         author: "- Tim Salmon",
         momentos: [
-            { año: "1979", titulo: "El Primer Banderín Divisional", desc: "Bajo la guía de Don Baylor y Nolan Ryan, los Angels ganan por primera vez la dura División Oeste.", video: "https://www.youtube.com/embed/jZ_y-A-Z-Kk" },
-            { año: "1986", titulo: "El Drama contra Boston", desc: "Una Serie de Campeonato cardiaca que quedó grabada como una de las batallas más dolorosas en la historia del club.", video: "https://www.youtube.com/embed/xR2S9_zX6gU" },
-            { año: "2002", titulo: "El Milagro del Rally Monkey", desc: "Una épica remontada de 5 carreras en la Serie Mundial liderada por Scott Spiezio asegura el primer título.", video: "https://www.youtube.com/embed/2X1z0l9k8m7" },
-            { año: "2014", titulo: "El MVP Unánime de Trout", desc: "Mike Trout consagra su estatus como el mejor jugador del planeta liderando a los Angels a 98 victorias.", video: "https://www.youtube.com/embed/hO3-Jq0p-08" },
-            { año: "2019", titulo: "El Juego sin Hit de Skaggs", desc: "Una noche increíblemente emotiva donde todos los jugadores usaron el dorsal 45 en honor a su lanzador fallecido.", video: "https://www.youtube.com/embed/Q0F_x0_rGcw" },
-            { año: "2021", titulo: "El Fenómeno Ohtani", desc: "Shohei Ohtani rompe paradigmas ganando el MVP de manera unánime con 46 jonrones y dominio absoluto como lanzador.", video: "https://www.youtube.com/embed/Xq-J4z3C0_w" }
+            { año: "1979", titulo: "El Primer Banderín Divisional", desc: "Bajo la guía de Don Baylor y Nolan Ryan, los Angels ganan por primera vez la dura División Oeste.", video: "https://www.youtube.com/embed/kRRZA2sHQnU" },
+            { año: "1986", titulo: "El Drama contra Boston", desc: "Una Serie de Campeonato cardiaca que quedó grabada como una de las batallas más dolorosas en la historia del club.", video: "https://www.youtube.com/embed/WcE9LI1Sv9g" },
+            { año: "2002", titulo: "El Milagro del Rally Monkey", desc: "Una épica remontada de 5 carreras en la Serie Mundial liderada por Scott Spiezio asegura el primer título.", video: "https://www.youtube.com/embed/7FqaIxaa32c" },
+            { año: "2014", titulo: "El MVP Unánime de Trout", desc: "Mike Trout consagra su estatus como el mejor jugador del planeta liderando a los Angels a 98 victorias.", video: "https://www.youtube.com/embed/Cd34bcn3JDo" },
+            { año: "2019", titulo: "El Juego sin Hit de Skaggs", desc: "Una noche increíblemente emotiva donde todos los jugadores usaron el dorsal 45 en honor a su lanzador fallecido.", video: "https://www.youtube.com/embed/CUt-DmGXOxY" },
+            { año: "2021", titulo: "El Fenómeno Ohtani", desc: "Shohei Ohtani rompe paradigmas ganando el MVP de manera unánime con 46 jonrones y dominio absoluto como lanzador.", video: "https://www.youtube.com/embed/1_vwSfJ5aRk" }
         ]
     }
 };
