@@ -5,8 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trivia</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -79,7 +77,6 @@
     </div>
   </section>
 
-
   <div class="combobox-equipos">
     <input type="text" id="combo-input" placeholder="Elige un equipo..." autocomplete="off" readonly>
     <span class="flecha">&#9662;</span>
@@ -103,54 +100,67 @@
     </ul>
   </div>
 
-
   <section id="section-trivia">
     <div class="trivia-container">
       <div class="header-block">
         <span class="pre-title">PON A PRUEBA TUS CONOCIMIENTOS</span>
         <h2 class="title">¿Cuánto sabes de béisbol?</h2>
-        <p class="subtitle">Demuestra que eres un auténtico fanático de la pelota caliente respondiendo nuestro
-          cuestionario interactivo de la semana.</p>
+        <p class="subtitle">Demuestra que eres un auténtico fanático de la pelota caliente respondiendo nuestro cuestionario interactivo de la semana.</p>
       </div>
 
+      <div id="reward-card" class="collectible-card" style="display: none;">
+        <div class="card-inner">
+            <div class="card-glare"></div>
+            <div class="reward-header">
+                <span class="reward-tag">PREMIO EXCLUSIVO</span>
+                <h3 class="reward-title">Tarjeta Histórica</h3>
+            </div>
+            <div class="reward-image-box">
+                <img src="images/logo.png" alt="Leyenda" id="reward-img" class="reward-img">
+            </div>
+            <div class="reward-info">
+                <h4 id="reward-name" class="reward-name">Cargando...</h4>
+                <p id="reward-desc" class="reward-desc">Obteniendo datos del Salón de la Fama...</p>
+            </div>
+        </div>
+      </div>
 
-
-      <div class="dashboard">
+      <div class="dashboard" id="trivia-dashboard">
         <div class="progress-group">
-          <span class="label">PREGUNTA 4 DE 5</span>
+          <span class="label">PREGUNTA 1 DE 5</span>
           <div class="progress-bg">
-            <div class="progress-fill" style="width: 40%;"></div>
+            <div class="progress-fill" style="width: 20%;"></div>
           </div>
         </div>
         <div class="score-group">
           <span class="label">PUNTAJE ACTUAL:</span>
-          <div class="score-badge">3 / 5 ACERTADAS</div>
+          <div class="score-badge">0 / 5 ACERTADAS</div>
         </div>
       </div>
 
-      <div class="question-card">
+      <div class="question-card" id="trivia-question-box">
         <div class="icon-box">
           <img src="images/39_184.svg" alt="Question Icon">
         </div>
-        <h3 class="question-text">¿En qué año se jugó el primer partido de béisbol profesional en la historia?</h3>
+        <h3 class="question-text">Cargando...</h3>
       </div>
 
-      <div class="answers-grid">
+      <div class="answers-grid" id="trivia-answers">
         <button class="answer-btn">
           <div class="option-indicator">A</div>
-          <span class="answer-text">1845 — Reglas de Cartwright</span>
+          <span class="answer-text">Opción A</span>
         </button>
         <button class="answer-btn">
           <div class="option-indicator">B</div>
-          <span class="answer-text">1869 — Cincinnati Red Stockings</span>
+          <span class="answer-text">Opción B</span>
         </button>
         <button class="answer-btn">
           <div class="option-indicator">C</div>
-          <span class="answer-text">1876 — Fundación Liga Nacional</span>
+          <span class="answer-text">Opción C</span>
         </button>
         <button class="answer-btn">
           <div class="option-indicator">D</div>
-          <span class="answer-text">1903 — Primera Serie Mundial</span>
+          <span class="answer-text">Opción D</span>
         </button>
       </div>
 
@@ -159,8 +169,6 @@
       </div>
     </div>
   </section>
-
-
 
   <section class="footer-wrapper">
     <footer class="container site-footer">
@@ -175,14 +183,8 @@
     </footer>
   </section>
 
-
-
-
   <script src="JS/global.js"></script>
   <script src="JS/trivia.js"></script>
-
-
-
 </body>
 
 </html>

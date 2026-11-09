@@ -1,7 +1,3 @@
-
-
-
-
 const EQUIPOS_AL = {
     NYY: { codigo: "NYY", nombre: "Yankees" },
     BOS: { codigo: "BOS", nombre: "Red Sox" },
@@ -22,7 +18,6 @@ const EQUIPOS_AL = {
 
 const MAPA_COMBO_A_CODIGO = {};
 Object.values(EQUIPOS_AL).forEach(eq => MAPA_COMBO_A_CODIGO[eq.nombre.toLowerCase()] = eq.codigo);
-
 
 const BANCO_TRIVIA = {
     NYY: [
@@ -132,19 +127,38 @@ const BANCO_TRIVIA = {
     ]
 };
 
-document.addEventListener("DOMContentLoaded", () => {
+// Diccionario de recompensas (Una leyenda por equipo)
+const RECOMPENSAS = {
+    NYY: { nombre: "Babe Ruth", desc: "El jugador más influyente de la historia.", wiki: "Babe_Ruth" },
+    BOS: { nombre: "David Ortiz", desc: "El eterno bateador designado y rey de octubre.", wiki: "David_Ortiz" },
+    BAL: { nombre: "Cal Ripken Jr.", desc: "El Hombre de Hierro, 2,632 juegos seguidos.", wiki: "Cal_Ripken_Jr." },
+    TB:  { nombre: "Evan Longoria", desc: "La cara histórica de los Tampa Bay Rays.", wiki: "Evan_Longoria" },
+    TOR: { nombre: "Roberto Alomar", desc: "La estrella indiscutible del bicampeonato canadiense.", wiki: "Roberto_Alomar" },
+    CWS: { nombre: "Frank Thomas", desc: "'The Big Hurt'. Un bateador sencillamente temible.", wiki: "Frank_Thomas_(designated_hitter)" },
+    CLE: { nombre: "Bob Feller", desc: "Dueño de una recta fulminante y leyenda de Ohio.", wiki: "Bob_Feller" },
+    MIN: { nombre: "Kirby Puckett", desc: "El alma absoluta de las Ciudades Gemelas.", wiki: "Kirby_Puckett" },
+    DET: { nombre: "Miguel Cabrera", desc: "Ganador de la Triple Corona y maestro del madero.", wiki: "Miguel_Cabrera" },
+    KC:  { nombre: "George Brett", desc: "El ícono absoluto de la Realeza del medio oeste.", wiki: "George_Brett" },
+    HOU: { nombre: "José Altuve", desc: "El corazón y motor de la dinastía moderna.", wiki: "José_Altuve" },
+    TEX: { nombre: "Nolan Ryan", desc: "El rey del ponche. La máxima estrella solitaria.", wiki: "Nolan_Ryan" },
+    SEA: { nombre: "Ken Griffey Jr.", desc: "El swing más perfecto en la historia del béisbol.", wiki: "Ken_Griffey_Jr." },
+    ATH: { nombre: "Rickey Henderson", desc: "El indomable rey de las bases robadas.", wiki: "Rickey_Henderson" },
+    LAA: { nombre: "Mike Trout", desc: "El mejor talento generacional del siglo XXI.", wiki: "Mike_Trout" }
+};
 
+document.addEventListener("DOMContentLoaded", () => {
+    // Variables de Estado
     let currentTeamCode = "NYY";
     let questions = [];
     let currentQuestionIndex = 0;
     let score = 0;
-
-
+    
+    // Variables de control de ronda
     let answeredCurrent = false;
     let failedAttempts = 0;
     let isGameOver = false;
 
-
+    // Referencias al DOM de la Trivia
     const questionText = document.querySelector(".question-text");
     const progressLabel = document.querySelector(".progress-group .label");
     const progressFill = document.querySelector(".progress-fill");
@@ -154,29 +168,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const comboInput = document.getElementById("combo-input");
     const comboItems = document.querySelectorAll("#combo-lista li");
 
+    // Elementos de la Recompensa (Ocultos inicialmente)
+    const rewardCard = document.getElementById("reward-card");
+    const rewardImg = document.getElementById("reward-img");
+    const rewardName = document.getElementById("reward-name");
+    const rewardDesc = document.getElementById("reward-desc");
+    
+    const dashboardBox = document.getElementById("trivia-dashboard");
+    const questionBox = document.getElementById("trivia-question-box");
+    const answersGrid = document.getElementById("trivia-answers");
+
     function loadTriviaData(codigo) {
         currentTeamCode = codigo || "NYY";
         const equipoInfo = EQUIPOS_AL[currentTeamCode];
-
-
+        
         localStorage.setItem("equipoSeleccionado", currentTeamCode);
         if (comboInput) comboInput.value = equipoInfo.nombre;
-
+        
         if (titleHeader) {
             titleHeader.textContent = `¿Cuánto sabes de los ${equipoInfo.nombre}?`;
         }
-
 
         if (typeof window.actualizarHeaderLive === "function") {
             window.actualizarHeaderLive();
         }
 
-
         questions = BANCO_TRIVIA[currentTeamCode] || BANCO_TRIVIA.NYY;
         currentQuestionIndex = 0;
         score = 0;
         isGameOver = false;
-
+        
+        rewardCard.style.display = "none";
+        dashboardBox.style.display = "flex";
+        questionBox.style.display = "flex";
+        answersGrid.style.display = "grid";
+        
         renderQuestion();
     }
 
@@ -187,42 +213,37 @@ document.addEventListener("DOMContentLoaded", () => {
         btnNext.textContent = "SIGUIENTE PREGUNTA";
 
         const currentQ = questions[currentQuestionIndex];
-
+        
         questionText.textContent = currentQ.q;
         progressLabel.textContent = `PREGUNTA ${currentQuestionIndex + 1} DE 5`;
         progressFill.style.width = `${((currentQuestionIndex + 1) / 5) * 100}%`;
         scoreBadge.textContent = `${score} / 5 ACERTADAS`;
 
-
         let currentAnswerBtns = document.querySelectorAll(".answer-btn");
         const letras = ["A", "B", "C", "D"];
-
+        
         currentAnswerBtns.forEach((btn, index) => {
-            btn.className = "answer-btn";
-            btn.style.display = "flex";
-
+            btn.className = "answer-btn"; 
+            
             const indicator = btn.querySelector(".option-indicator");
             const textSpan = btn.querySelector(".answer-text");
-
+            
             indicator.textContent = letras[index];
             textSpan.textContent = currentQ.options[index];
 
-
             const nuevoBtn = btn.cloneNode(true);
             btn.replaceWith(nuevoBtn);
-
             nuevoBtn.addEventListener("click", () => handleAnswer(index, nuevoBtn));
         });
     }
 
     function handleAnswer(selectedIndex, clickedBtn) {
         if (answeredCurrent || isGameOver) return;
-        if (clickedBtn.classList.contains("disabled")) return;
+        if (clickedBtn.classList.contains("disabled")) return; 
 
         const currentQ = questions[currentQuestionIndex];
         const correctIndex = currentQ.ans;
-
-
+        
         const currentAnswerBtns = document.querySelectorAll(".answer-btn");
 
         if (selectedIndex === correctIndex) {
@@ -232,7 +253,6 @@ document.addEventListener("DOMContentLoaded", () => {
             btnNext.disabled = false;
             scoreBadge.textContent = `${score} / 5 ACERTADAS`;
 
-
             currentAnswerBtns.forEach(b => {
                 if (!b.classList.contains("correct")) b.classList.add("disabled");
             });
@@ -241,19 +261,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 btnNext.textContent = "VER RESULTADOS";
             }
         } else {
-
             clickedBtn.classList.add("wrong");
             clickedBtn.classList.add("disabled");
             failedAttempts++;
 
             if (failedAttempts >= 2) {
-
                 answeredCurrent = true;
                 isGameOver = true;
-
-
+                
                 currentAnswerBtns[correctIndex].classList.add("correct");
-
 
                 currentAnswerBtns.forEach(b => {
                     if (!b.classList.contains("correct") && !b.classList.contains("wrong")) {
@@ -267,12 +283,43 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }
-
+    
+    async function showCollectibleReward() {
+        dashboardBox.style.display = "none";
+        questionBox.style.display = "none";
+        answersGrid.style.display = "none";
+        
+        const rewardData = RECOMPENSAS[currentTeamCode];
+        
+        rewardName.textContent = rewardData.nombre;
+        rewardDesc.textContent = rewardData.desc;
+        rewardImg.src = "images/logo.png";
+        
+        rewardCard.style.display = "block";
+        btnNext.textContent = "JUGAR DE NUEVO";
+        
+        if (rewardData.wiki) {
+            try {
+                let res = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${rewardData.wiki}`);
+                if (!res.ok) {
+                    res = await fetch(`https://es.wikipedia.org/api/rest_v1/page/summary/${rewardData.wiki}`);
+                }
+                const data = await res.json();
+                
+                if (data.originalimage && data.originalimage.source) {
+                    rewardImg.src = data.originalimage.source;
+                } else if (data.thumbnail && data.thumbnail.source) {
+                    rewardImg.src = data.thumbnail.source;
+                }
+            } catch (e) {
+                console.warn(`No se pudo cargar la imagen del premio para: ${rewardData.nombre}`);
+            }
+        }
+    }
 
     btnNext.addEventListener("click", () => {
-
         if (isGameOver) {
-            loadTriviaData(currentTeamCode);
+            loadTriviaData(currentTeamCode); // Reinicia todo
             return;
         }
 
@@ -280,15 +327,18 @@ document.addEventListener("DOMContentLoaded", () => {
             currentQuestionIndex++;
             renderQuestion();
         } else {
-
             isGameOver = true;
-            questionText.textContent = `¡Trivia completada! Lograste ${score} de 5 respuestas correctas.`;
-            progressLabel.textContent = `COMPLETADO`;
-            document.querySelectorAll(".answer-btn").forEach(b => b.style.display = "none");
-            btnNext.textContent = "JUGAR DE NUEVO";
+            
+            if (score === 5) {
+                 showCollectibleReward();
+            } else {
+                 questionText.textContent = `¡Trivia completada! Lograste ${score} de 5 respuestas correctas. Acierta 5/5 para desbloquear una tarjeta coleccionable.`;
+                 progressLabel.textContent = `COMPLETADO`;
+                 document.querySelectorAll(".answer-btn").forEach(b => b.style.display = "none");
+                 btnNext.textContent = "INTENTAR DE NUEVO";
+            }
         }
     });
-
 
     comboItems.forEach(item => {
         item.addEventListener("click", () => {
@@ -297,12 +347,11 @@ document.addEventListener("DOMContentLoaded", () => {
             if (codigo) {
                 const nuevaUrl = `${window.location.pathname}?equipo=${codigo}`;
                 window.history.replaceState({ path: nuevaUrl }, "", nuevaUrl);
-
+                
                 loadTriviaData(codigo);
             }
         });
     });
-
 
     const urlParams = new URLSearchParams(window.location.search);
     const equipoInicial = urlParams.get("equipo")?.toUpperCase() || localStorage.getItem("equipoSeleccionado") || "NYY";

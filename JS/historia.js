@@ -271,6 +271,8 @@ const DATOS_HISTORIA = {
     }
 };
 
+
+
 const MAPA_COMBO_A_CODIGO = {
     "rays": "TB", "yankees": "NYY", "red sox": "BOS", "orioles": "BAL",
     "blue jays": "TOR", "white sox": "CWS", "guardians": "CLE", "twins": "MIN",
@@ -308,31 +310,53 @@ document.addEventListener("DOMContentLoaded", () => {
         hQuote.textContent = datos.quote;
         hAuthor.textContent = datos.author;
 
-
         contenedorVideos.innerHTML = "";
+        
         datos.momentos.forEach(momento => {
             const article = document.createElement("article");
             article.className = "video-card";
+            
             article.innerHTML = `
                 <div class="video-thumbnail">
                     <iframe src="${momento.video}" class="thumb-video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+                
+                <div class="video-filters-card">
+                    <div class="filter-buttons">
+                        <button class="btn-filter active" data-filter="normal">Normal</button>
+                        <button class="btn-filter" data-filter="glitch">Glitch</button>
+                        <button class="btn-filter" data-filter="cyberpunk">Cyberpunk</button>
+                        <button class="btn-filter" data-filter="psicodelico">Psicodélico</button>
+                    </div>
+                </div>
+                
                 <div class="video-info">
                     <span class="year-tag">${momento.año}</span>
                     <h4 class="video-title">${momento.titulo}</h4>
                     <p class="video-desc">${momento.desc}</p>
                 </div>
             `;
+            
+            const filterBtns = article.querySelectorAll('.btn-filter');
+            const iframe = article.querySelector('.thumb-video');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    iframe.className = 'thumb-video'; // Restablece
+                    const filterName = btn.getAttribute('data-filter');
+                    
+                    if (filterName !== 'normal') {
+                        iframe.classList.add(`filter-${filterName}`);
+                    }
+                });
+            });
+
             contenedorVideos.appendChild(article);
         });
-
-
-        document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
-        const btnNormal = document.querySelector('.btn-filter[data-filter="normal"]');
-        if(btnNormal) btnNormal.classList.add('active');
-        document.querySelectorAll('.thumb-video').forEach(iframe => iframe.className = 'thumb-video');
     }
-
 
     comboItems.forEach(item => {
         item.addEventListener("click", () => {
@@ -349,28 +373,4 @@ document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
     const equipoInicial = urlParams.get("equipo")?.toUpperCase() || localStorage.getItem("equipoSeleccionado") || "NYY";
     cargarHistoria(equipoInicial);
-
-
-
-
-    const filterButtons = document.querySelectorAll('.btn-filter');
-
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-
-            filterButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const iframes = document.querySelectorAll('.thumb-video');
-            const filterName = btn.getAttribute('data-filter');
-
-
-            iframes.forEach(iframe => {
-                iframe.className = 'thumb-video';
-                if (filterName !== 'normal') {
-                    iframe.classList.add(`filter-${filterName}`);
-                }
-            });
-        });
-    });
 });
