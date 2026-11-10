@@ -583,12 +583,14 @@ function startPitch() {
     baseballImg.style.display = "block";
 
     currentCurve = Math.random() < 0.5 ? 1 : -1;
-    let startX = 170;
-    let startY = 120;
+    let startX = 170 / 400;
+    let startY = 120 / 350;
     let startTime = null;
 
-    let baseMinDuration = Math.max(500, 1000 - (winStreak * 100));
-    let baseMaxDuration = Math.max(800, 1800 - (winStreak * 200));
+    // let baseMinDuration = Math.max(500, 1000 - (winStreak * 100));
+    // let baseMaxDuration = Math.max(800, 1800 - (winStreak * 200));
+    let baseMinDuration = Math.max(500, 1300 - (winStreak * 150));
+let baseMaxDuration = Math.max(800, 2200 - (winStreak * 250));
     currentDuration = Math.floor(Math.random() * (baseMaxDuration - baseMinDuration)) + baseMinDuration;
 
     function animateBall(timestamp) {
@@ -597,13 +599,18 @@ function startPitch() {
         currentProgress = elapsed / currentDuration;
 
         if (currentProgress < 1) {
-            let curveIntensity = Math.min(85, 50 + (winStreak * 7));
-            let currentX = startX + (200 - startX) * currentProgress + Math.sin(currentProgress * Math.PI) * curveIntensity * currentCurve;
-            let currentY = startY + (280 - startY) * currentProgress;
+            let curveIntensity = Math.min(85, 30 + (winStreak * 10)) / 400;
+let currentX = startX + (0.5 - startX) * currentProgress + Math.sin(currentProgress * Math.PI) * curveIntensity * currentCurve;
+let currentY = startY + (0.8 - startY) * currentProgress;
+            // let curveIntensity = Math.min(85, 50 + (winStreak * 7));
+            // let currentX = startX + (200 - startX) * currentProgress + Math.sin(currentProgress * Math.PI) * curveIntensity * currentCurve;
+            // let currentY = startY + (280 - startY) * currentProgress;
             let currentScale = 0.3 + (currentProgress * 1.5);
 
-            baseballImg.style.left = `${currentX}px`;
-            baseballImg.style.top = `${currentY}px`;
+            // baseballImg.style.left = `${currentX}px`;
+            // baseballImg.style.top = `${currentY}px`;
+            baseballImg.style.left = `${currentX * 100}%`;
+            baseballImg.style.top = `${currentY * 100}%`;
             baseballImg.style.transform = `scale(${currentScale})`;
 
             if (pitchActive) {

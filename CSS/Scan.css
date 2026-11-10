@@ -1,6 +1,7 @@
 #modal-escaneo,
 #modal-minijuego {
   z-index: 9999;
+
 }
 
 #modal-escaneo {
@@ -121,11 +122,14 @@
   max-width: 600px;
   border: 1px solid #2c2c35;
   border-radius: 12px;
-  padding: 24px;
+  /* padding: 24px; */
   background-color: #121214;
   color: #f4f4f6;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   margin: auto;
+   padding: clamp(12px, 4vw, 24px);   
+  max-height: 94dvh;                 
+  overflow-y: auto;                  
 }
 
 #game-container {

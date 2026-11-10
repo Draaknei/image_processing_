@@ -1,4 +1,2 @@
-## sgikhelgkhlkeghlkjeglkejglekjgkljeg
-```javascript
-console.log("didy")
 ```
+Thanks didy booty carlos cortes and claude code
